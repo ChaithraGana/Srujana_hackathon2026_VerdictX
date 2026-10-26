@@ -2508,45 +2508,6 @@ function MSMEVerificationPage({
           </div>
         )}
 
-      <section className="table-card" style={{ marginBottom: '24px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
-          <div>
-            <span className="small-label" style={{ color: '#785116', fontSize: '17px', fontWeight: 800, letterSpacing: '0.12em' }}>1-CLICK STATUTORY TEST SCENARIOS</span>
-            <h3 style={{ margin: '4px 0 0', fontSize: '21px', color: '#07111f', fontWeight: 700 }}>Evaluate Pre-Generated Government Certificates</h3>
-          </div>
-          <span className="status-pill pill-neutral" style={{ fontSize: '17px', fontWeight: 700 }}>Judge / Auditor Fast-Track</span>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '12px' }}>
-          {presets.map((p) => {
-            const isSelected = selectedPresetId === p.id;
-            return (
-              <button
-                key={p.id}
-                type="button"
-                className={`button ${isSelected ? 'button-gold' : 'button-outline'}`}
-                style={{
-                  textAlign: 'left',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  padding: '13px 15px',
-                  height: 'auto',
-                  border: isSelected ? '1.5px solid var(--gold)' : '1px solid rgba(255,255,255,0.2)',
-                  background: isSelected ? 'rgba(200,169,110,0.22)' : 'rgba(15,26,44,0.72)'
-                }}
-                onClick={() => handleSelectPreset(p)}
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center', marginBottom: '5px' }}>
-                  <strong style={{ fontSize: '19px', color: '#ffffff', fontWeight: 700 }}>{p.title}</strong>
-                  <StatusPill tone={p.badge_tone}>{p.expected_verdict}</StatusPill>
-                </div>
-                <small style={{ color: '#f0ece1', fontSize: '18px', lineHeight: 1.45, fontWeight: 500 }}>{p.subtitle}</small>
-                <code style={{ marginTop: '7px', fontSize: '18px', color: '#ffd478', fontWeight: 700, letterSpacing: '0.04em' }}>{p.udyam_number}</code>
-              </button>
-            );
-          })}
-        </div>
-      </section>
 
       <div className="proof-grid">
         <section className="proof-main-card">

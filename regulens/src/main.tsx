@@ -423,15 +423,6 @@ function WorkspaceSettingsModal({
           >
             <Icon name="document" size={15} /> Languages & Gazettes
           </button>
-          <button
-            type="button"
-            className={`settings-tab-btn ${activeTab === 'system' ? 'tab-active' : ''}`}
-            onClick={() => setActiveTab('system')}
-            role="tab"
-            aria-selected={activeTab === 'system'}
-          >
-            <Icon name="spark" size={15} /> API & System Connectivity
-          </button>
         </div>
 
         {/* Tab Content */}
@@ -698,89 +689,7 @@ function WorkspaceSettingsModal({
             </div>
           )}
 
-          {activeTab === 'system' && (
-            <div>
-              <div className="settings-card">
-                <div className="settings-card-header">
-                  <strong><Icon name="spark" size={16} /> FastAPI Engine Connection & Runtime</strong>
-                  {pingStatus.status === 'online' && (
-                    <span className="status-pill pill-good" style={{ fontSize: '17px' }}>🟢 Online</span>
-                  )}
-                  {pingStatus.status === 'offline' && (
-                    <span className="status-pill pill-warn" style={{ fontSize: '17px' }}>🟡 Local Fallback</span>
-                  )}
-                </div>
 
-                <div className="settings-field" style={{ marginBottom: '14px' }}>
-                  <label>FastAPI Backend Server Base URL</label>
-                  <div style={{ display: 'flex', gap: '8px' }}>
-                    <input
-                      type="text"
-                      value={apiUrl}
-                      onChange={(e) => setApiUrl(e.target.value)}
-                      placeholder="http://localhost:8000"
-                      style={{ flex: 1 }}
-                    />
-                    <button
-                      type="button"
-                      className="button button-gold button-small"
-                      onClick={testBackendConnection}
-                      disabled={pingStatus.status === 'checking'}
-                    >
-                      {pingStatus.status === 'checking' ? 'Pinging…' : 'Ping Backend (:8000)'}
-                    </button>
-                  </div>
-                  <small>Backend hosts the Scikit-Learn TF-IDF classifier, Legal Diff service, and ProofPath hash generator.</small>
-                </div>
-
-                {pingStatus.msg && (
-                  <div
-                    style={{
-                      padding: '10px 14px',
-                      borderRadius: '4px',
-                      fontSize: '17px',
-                      marginBottom: '14px',
-                      background: pingStatus.status === 'online' ? 'rgba(66, 185, 166, 0.12)' : 'rgba(200, 169, 110, 0.12)',
-                      border: pingStatus.status === 'online' ? '1px solid rgba(66, 185, 166, 0.3)' : '1px solid rgba(200, 169, 110, 0.3)',
-                      color: pingStatus.status === 'online' ? 'var(--teal)' : 'var(--gold-soft)'
-                    }}
-                  >
-                    {pingStatus.msg}
-                  </div>
-                )}
-
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px', marginTop: '10px' }}>
-                  <div style={{ padding: '10px', background: 'rgba(243,239,230,0.03)', borderRadius: '4px', border: '1px solid rgba(243,239,230,0.08)' }}>
-                    <small style={{ color: 'rgba(243,239,230,0.5)', textTransform: 'uppercase', fontSize: '17px', fontWeight: 700 }}>Database Store</small>
-                    <div style={{ fontSize: '17px', marginTop: '3px', color: 'var(--ivory)' }}>Supabase PostgreSQL / Local Fallback</div>
-                  </div>
-                  <div style={{ padding: '10px', background: 'rgba(243,239,230,0.03)', borderRadius: '4px', border: '1px solid rgba(243,239,230,0.08)' }}>
-                    <small style={{ color: 'rgba(243,239,230,0.5)', textTransform: 'uppercase', fontSize: '17px', fontWeight: 700 }}>ML Classifier Model</small>
-                    <div style={{ fontSize: '17px', marginTop: '3px', color: 'var(--ivory)' }}>Scikit-Learn TF-IDF (35 Gazette Topics)</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="settings-card">
-                <div className="settings-card-header">
-                  <strong><Icon name="info" size={16} /> Local Storage & Demonstration State</strong>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
-                  <div>
-                    <strong style={{ fontSize: '18px', display: 'block' }}>Reset Local ProofPath Audit Hashes</strong>
-                    <small style={{ color: 'rgba(243,239,230,0.6)', fontSize: '17px' }}>Removes cached browser-session audit records to run fresh benchmark validations.</small>
-                  </div>
-                  <button
-                    type="button"
-                    className="button button-outline button-small"
-                    onClick={handleClearCache}
-                  >
-                    {cacheCleared ? 'Cleared ✓' : 'Clear Audit Cache'}
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Footer */}

@@ -1,0 +1,168 @@
+{
+  "case_id": "CASE_C_MCA_DIRECTOR_KYC",
+  "title": "MCA Director KYC Regulatory Change Analysis",
+  "jurisdiction": "India",
+  "regulator": "Ministry of Corporate Affairs",
+  "comparison_period": "2019 amendments with 2014 Rules as the underlying framework",
+  "sources": [
+    {
+      "source_id": "C1",
+      "file": "mca_director_rules_2014.pdf",
+      "document": "Companies (Appointment and Qualification of Directors) Rules, 2014",
+      "purpose": "Original rules and regulatory framework",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "limitation": "The uploaded original text does not independently establish the previous Rule 12A deadline. The PDF also contains a later 2025 amendment."
+    },
+    {
+      "source_id": "C2",
+      "file": "mca_director_kyc_amendment_2019.pdf",
+      "notification_number": "G.S.R. 339(E)",
+      "publication_date": "2019-04-30",
+      "document": "Companies (Appointment and Qualification of Directors) Amendment Rules, 2019",
+      "purpose": "Direct amendment to Rule 12A",
+      "relevant_pdf_page": 2,
+      "verification_status": "VERIFIED"
+    },
+    {
+      "source_id": "C3",
+      "file": "mca_director_rules_fourth_amendment_2019.pdf",
+      "notification_number": "G.S.R. 527(E)",
+      "publication_date": "2019-07-25",
+      "document": "Companies (Registration Offices and Fees) Fourth Amendment Rules, 2019",
+      "purpose": "Fee schedule for DIR-3 KYC and DIR-3 KYC-WEB filings",
+      "relevant_pdf_pages": [
+        1,
+        2,
+        3
+      ],
+      "verification_status": "VERIFIED",
+      "limitation": "This notification amends the Registration Offices and Fees Rules, not Rule 12A directly."
+    },
+    {
+      "source_id": "C4",
+      "file": "mca_rule12a_insertion_2018.pdf",
+      "document": "Companies (Appointment and Qualification of Directors) Fourth Amendment Rules, 2018",
+      "notification_number": "G.S.R. 615(E)",
+      "notification_date": "2018-07-05",
+      "gazette_publication_date": "2018-07-06",
+      "effective_date": "2018-07-10",
+      "purpose": "Original insertion of Rule 12A (Director KYC) and initial 31 August 2018 proviso",
+      "source_url": "https://indiacode.ecourtsindia.com/rules/d4a862fc/",
+      "official_mca_url": "https://www.mca.gov.in/bin/ebook/dms/getdocument?doc=MzA1NjQ%3D&docCategory=Notifications&type=open",
+      "text_review_status": "SOURCE_PAGE_TEXT_REVIEWED",
+      "pdf_download_status": "PENDING",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "limitation": "Relevant text reviewed from India Code source page; authoritative PDF could not be downloaded into this package. See docs/case_c_official_source_transcriptions.md."
+    },
+    {
+      "source_id": "C5",
+      "file": "mca_director_third_amendment_2019.pdf",
+      "document": "Companies (Appointment and Qualification of Directors) Third Amendment Rules, 2019",
+      "notification_number": "G.S.R. 528(E)",
+      "notification_date": "2019-07-25",
+      "effective_date": "2019-07-25",
+      "purpose": "Historical Rule 12A amendments: holder wording, 30 September deadline, DIR-3-KYC-WEB and related provisos",
+      "source_url": "https://indiacode.ecourtsindia.com/rules/c03ddc7d/",
+      "official_mca_url": "https://www.mca.gov.in/Ministry/pdf/ThirdAmendRules_25072019.pdf",
+      "india_code_source_pdf_url": "https://indiacode.ecourtsindia.com/doc/586a7178-07b4-4a45-85ee-61980b28c5e5.pdf",
+      "text_review_status": "SOURCE_PAGE_TEXT_REVIEWED",
+      "pdf_download_status": "PENDING",
+      "verification_status": "PARTIALLY_VERIFIED",
+      "limitation": "Relevant text reviewed from India Code page and linked PDF text; original MCA PDF could not be downloaded into this package. See docs/case_c_official_source_transcriptions.md."
+    }
+  ],
+  "provisions": [
+    {
+      "rule": "12A",
+      "topic": "Original Rule 12A insertion",
+      "baseline_wording": null,
+      "amended_wording": "Every individual who has been allotted a DIN as on 31 March of a financial year shall submit e-form DIR-3-KYC on or before 30 April of the immediate next financial year; a special initial deadline of 31 August 2018 applied to individuals allotted DIN as at 31 March 2018.",
+      "amendment_notification": "G.S.R. 615(E)",
+      "publication_date": "2018-07-06",
+      "notification_date": "2018-07-05",
+      "effective_date": "2018-07-10",
+      "baseline_source": null,
+      "source_id": "C4",
+      "source_url": "https://indiacode.ecourtsindia.com/rules/d4a862fc/",
+      "change_summary": "Rule 12A was inserted by the 2018 Fourth Amendment Rules; it introduced annual Director KYC filing and a special initial deadline.",
+      "change_type": "RULE_INSERTION",
+      "verification_status": "SOURCE_PAGE_TEXT_REVIEWED_PDF_PENDING",
+      "limitation": "Text reviewed from India Code source page; authoritative PDF file is not included yet."
+    },
+    {
+      "rule": "12A",
+      "topic": "Director KYC filing deadline",
+      "baseline_wording": "on or before 30th April of immediate next financial year",
+      "baseline_source": "C2, page 2, wording quoted in the amendment",
+      "amended_wording": "on or before 30th June of immediate next financial year",
+      "amendment_notification": "G.S.R. 339(E)",
+      "publication_date": "2019-04-30",
+      "effective_date": "2019-04-30",
+      "page_references": [
+        {
+          "source_id": "C2",
+          "pdf_page": 2,
+          "printed_page": 2
+        }
+      ],
+      "change_summary": "The 2019 amendment substituted 30 June for 30 April as the Rule 12A filing deadline.",
+      "change_type": "DEADLINE_EXTENSION",
+      "verification_status": "VERIFIED_WITH_SOURCE_LIMITATION"
+    },
+    {
+      "rule": "Registration Offices and Fees Rules, 2014, Annexure item VII",
+      "topic": "Director KYC filing fees",
+      "baseline_wording": null,
+      "amended_wording": "Fee schedule specifies filing by 30 September for the immediately previous financial year, subject to the stated conditions, and a Rs. 5000 delayed fee.",
+      "amendment_notification": "G.S.R. 527(E)",
+      "publication_date": "2019-07-25",
+      "effective_date": "2019-07-25",
+      "page_references": [
+        {
+          "source_id": "C3",
+          "pdf_page": 1,
+          "printed_page": 1
+        },
+        {
+          "source_id": "C3",
+          "pdf_page": 2,
+          "printed_page": 2
+        },
+        {
+          "source_id": "C3",
+          "pdf_page": 3,
+          "printed_page": 3
+        }
+      ],
+      "change_summary": "The Fourth Amendment substituted the fee schedule for DIR-3 KYC and DIR-3 KYC-WEB filings. Its 30 September fee-schedule wording must not be mistaken for a direct amendment of Rule 12A.",
+      "change_type": "FEE_SCHEDULE_CHANGE",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule": "12A",
+      "topic": "Rule 12A deadline and filing-method changes",
+      "baseline_wording": "who has been allotted; on or before 30th June of immediate next financial year",
+      "amended_wording": "who holds; submit e-form DIR-3-KYC for the said financial year on or before 30th September of immediate next financial year; DIR-3-KYC-WEB permitted for qualifying subsequent-year compliance, with stated exceptions for mobile/email updates.",
+      "amendment_notification": "G.S.R. 528(E)",
+      "publication_date": "2019-07-25",
+      "effective_date": "2019-07-25",
+      "source_id": "C5",
+      "source_url": "https://indiacode.ecourtsindia.com/rules/c03ddc7d/",
+      "change_summary": "The July 2019 Third Amendment changed the wording to DIN holders, moved the historical Rule 12A deadline from 30 June to 30 September, and added DIR-3-KYC-WEB-related provisions.",
+      "change_type": "DEADLINE_AND_FILING_METHOD_CHANGE",
+      "verification_status": "SOURCE_PAGE_TEXT_REVIEWED_PDF_PENDING",
+      "limitation": "Historical amendment only; it does not establish current filing obligations. PDF download remains pending."
+    }
+  ],
+  "limitations": [
+    "C1 does not independently verify the previous Rule 12A deadline.",
+    "C2 provides the previous wording in its amendment text.",
+    "C3 concerns fees and is a separate legal instrument.",
+    "The uploaded C1 PDF includes a 2025 amendment and is not solely an unamended 2014 text.",
+    "Historical amendment analysis does not by itself establish current compliance obligations.",
+    "C4 and C5 relevant text has been reviewed from India Code source pages; the official/source PDF files are not included in this package because automated downloads were blocked.",
+    "Do not treat C4/C5 text transcriptions as substitutes for official Gazette PDFs; retain REVIEW_REQUIRED until PDFs are downloaded and checked."
+  ],
+  "validation_status": "REVIEW_REQUIRED",
+  "application_test_status": "PENDING"
+}

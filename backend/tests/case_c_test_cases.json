@@ -1,0 +1,46 @@
+
+{
+  "case_id": "CASE_C_MCA_DIRECTOR_KYC",
+  "test_cases": [
+    {
+      "id": "C01",
+      "description": "A verified difference in Rule 12A is detected",
+      "expected_result": "CHANGE_DETECTED"
+    },
+    {
+      "id": "C02",
+      "description": "The amendment introduces a verified filing method",
+      "expected_result": "CHANGE_DETECTED"
+    },
+    {
+      "id": "C03",
+      "description": "The amendment's contact-detail requirement is verified",
+      "expected_result": "CHANGE_DETECTED"
+    },
+    {
+      "id": "C04",
+      "description": "The director profile lacks essential applicability details",
+      "expected_result": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "C05",
+      "description": "The original Rule 12A text is missing",
+      "expected_result": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "C06",
+      "description": "The amendment's effective date is unverified",
+      "expected_result": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "C07",
+      "description": "Only a non-authoritative summary is supplied",
+      "expected_result": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "C08",
+      "description": "A current-law question relies only on historical documents",
+      "expected_result": "REVIEW_REQUIRED"
+    }
+  ]
+}

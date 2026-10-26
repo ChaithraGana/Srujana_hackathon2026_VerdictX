@@ -1,0 +1,96 @@
+
+{
+  "case_id": "CASE_A_GST",
+  "title": "GST Regulatory Change Detection Test Benchmark",
+  "tests": [
+    {
+      "test_id": "A01",
+      "description": "Detect the 2022 GST threshold change",
+      "input": {
+        "change_year": 2022,
+        "previous_threshold_crore_inr": 20,
+        "new_threshold_crore_inr": 10,
+        "effective_date": "2022-10-01"
+      },
+      "expected_result": "CHANGE_DETECTED"
+    },
+    {
+      "test_id": "A02",
+      "description": "Detect the 2023 GST threshold change",
+      "input": {
+        "change_year": 2023,
+        "previous_threshold_crore_inr": 10,
+        "new_threshold_crore_inr": 5,
+        "effective_date": "2023-08-01"
+      },
+      "expected_result": "CHANGE_DETECTED"
+    },
+    {
+      "test_id": "A03",
+      "description": "SME turnover is 8.2 crore but applicability conditions are unverified",
+      "input": {
+        "annual_turnover_crore_inr": 8.2,
+        "turnover_period_verified": false,
+        "pan_aggregation_verified": false
+      },
+      "expected_result": "REVIEW_REQUIRED"
+    },
+    {
+      "test_id": "A04",
+      "description": "SME turnover is 0.75 crore but applicability is not fully established",
+      "input": {
+        "annual_turnover_crore_inr": 0.75,
+        "applicability_conditions_verified": false
+      },
+      "expected_result": "REVIEW_REQUIRED"
+    },
+    {
+      "test_id": "A05",
+      "description": "Turnover information is missing",
+      "input": {
+        "annual_turnover_crore_inr": null
+      },
+      "expected_result": "REVIEW_REQUIRED"
+    },     
+    {
+      "test_id": "A06",
+      "description": "Verified SME profile above the threshold",
+      "input": {
+        "annual_turnover_crore_inr": 8.2,
+        "threshold_crore_inr": 5,
+        "turnover_period_verified": true,
+        "pan_aggregation_verified": true,
+        "entity_exclusion_applies": false,
+        "effective_date": "2023-08-01"
+      },
+      "expected_result": "APPLICABLE"
+    },
+    {
+      "test_id": "A07",
+      "description": "Verified SME profile below the threshold",
+      "input": {
+        "annual_turnover_crore_inr": 4.2,
+        "threshold_crore_inr": 5,
+        "turnover_period_verified": true,
+        "pan_aggregation_verified": true,
+        "entity_exclusion_applies": false,
+        "effective_date": "2023-08-01"
+      },
+      "expected_result": "EXEMPT"
+    },
+    {
+      "test_id": "A08",
+      "description": "Business has not confirmed statutory exclusions",
+      "input": {
+        "annual_turnover_crore_inr": 8.2,
+        "threshold_crore_inr": 5,
+        "turnover_period_verified": true,
+        "pan_aggregation_verified": true,
+        "entity_exclusion_applies": null,
+        "effective_date": "2023-08-01"
+      },
+      "expected_result": "REVIEW_REQUIRED"
+    }
+
+  ]
+}

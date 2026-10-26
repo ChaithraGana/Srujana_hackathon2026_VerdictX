@@ -1,0 +1,148 @@
+
+{
+  "case_id": "CASE_A_GST_E_INVOICING",
+  "title": "GST E-Invoicing Threshold Changes",
+  "purpose": "Test whether ReguLens identifies amendments to the e-invoicing turnover threshold and explains their effective dates.",
+  "jurisdiction": "India",
+  "legal_area": "Goods and Services Tax",
+  "primary_source_authority": "Central Board of Indirect Taxes and Customs",
+  "source_documents": [
+    {
+      "document_id": "GST_13_2020",
+      "file_name": "gst_notification_13_2020.pdf",
+      "notification_number": "13/2020-Central Tax",
+      "issue_date": "2020-03-21",
+      "effective_date": "2020-10-01",
+      "document_role": "baseline",
+      "initial_threshold_inr": 1000000000,
+      "initial_threshold_crore_inr": 100,
+      "official_url": "https://gstcouncil.gov.in/node/4188"
+    },
+    {
+      "document_id": "GST_17_2022",
+      "file_name": "gst_notification_17_2022.pdf",
+      "notification_number": "17/2022-Central Tax",
+      "issue_date": "2022-08-01",
+      "effective_date": "2022-10-01",
+      "document_role": "amendment",
+      "previous_threshold_crore_inr": 20,
+      "new_threshold_crore_inr": 10,
+      "change_type": "threshold_reduction",
+      "official_url": "https://gstcouncil.gov.in/node/4345"
+    },
+    {
+      "document_id": "GST_10_2023",
+      "file_name": "gst_notification_10_2023.pdf",
+      "notification_number": "10/2023-Central Tax",
+      "issue_date": "2023-05-10",
+      "effective_date": "2023-08-01",
+      "document_role": "amendment",
+      "previous_threshold_crore_inr": 10,
+      "new_threshold_crore_inr": 5,
+      "change_type": "threshold_reduction",
+      "official_url": "https://gstcouncil.gov.in/node/4365"
+    },
+    {
+      "document_id": "GST_CIRCULAR_198_2023",
+      "file_name": "gst_circular_198_10_2023.pdf",
+      "circular_number": "198/10/2023-GST",
+      "issue_date": "2023-07-17",
+      "document_role": "interpretive_clarification",
+      "topic": "E-invoicing for supplies to specified government entities registered solely for TDS",
+      "official_url": "https://taxinformation.cbic.gov.in/"
+    }
+  ],
+  "historical_threshold_timeline": [
+    {
+      "effective_from": "2020-10-01",
+      "threshold_crore_inr": 100,
+      "source": "13/2020-Central Tax"
+    },
+    {
+      "effective_from": "2022-10-01",
+      "threshold_crore_inr": 10,
+      "source": "17/2022-Central Tax"
+    },
+    {
+      "effective_from": "2023-08-01",
+      "threshold_crore_inr": 5,
+      "source": "10/2023-Central Tax"
+    }
+  ],
+  "applicability_conditions_to_verify": [
+    "Aggregate turnover must be evaluated using the legally applicable financial-year rules.",
+    "Verify the relevant PAN-wide aggregate turnover and turnover period.",
+    "Check the applicable version of the notification and its effective date.",
+    "Check the exclusions referenced in the applicable notification and CGST Rules.",
+    "Verify the relevant supply and recipient conditions.",
+    "Do not decide applicability from the business turnover figure alone."
+  ],
+  "synthetic_sme_test_profiles": [
+    {
+      "profile_id": "SME_A",
+      "business_name": "Apex Precision Components Pvt Ltd",
+      "business_type": "Manufacturing",
+      "nic_code": "2930",
+      "annual_turnover_crore_inr": 8.2,
+      "employees": 24,
+      "states": [
+        "Maharashtra",
+        "Karnataka"
+      ],
+      "gst_regime": "Regular",
+      "is_synthetic": true,
+      "expected_result": "REVIEW_REQUIRED",
+      "reason": "Turnover is above the historical 5 crore threshold, but the relevant turnover period, PAN-wide aggregation, exclusions and other legal conditions must be verified."
+    },
+    {
+      "profile_id": "SME_B",
+      "business_name": "CloudSpark Digital LLP",
+      "business_type": "Software consulting",
+      "nic_code": "6201",
+      "annual_turnover_crore_inr": 0.75,
+      "employees": 5,
+      "states": [
+        "Karnataka"
+      ],
+      "gst_regime": "Regular",
+      "is_synthetic": true,
+      "expected_result": "REVIEW_REQUIRED",
+      "reason": "The supplied turnover is below the historical 5 crore threshold, but the relevant financial-year turnover, aggregation rules, exclusions and other legal conditions must still be checked."
+    }
+  ],
+  "validation_tests": [
+    {
+      "test_id": "TEST_01",
+      "scenario": "Detect the 2022 amendment",
+      "expected_change": "20 crore to 10 crore",
+      "expected_effective_date": "2022-10-01"
+    },
+    {
+      "test_id": "TEST_02",
+      "scenario": "Detect the 2023 amendment",
+      "expected_change": "10 crore to 5 crore",
+      "expected_effective_date": "2023-08-01"
+    },
+    {
+      "test_id": "TEST_03",
+      "scenario": "SME turnover above the historical threshold",
+      "expected_behavior": "Flag potential applicability and list conditions to verify."
+    },
+    {
+      "test_id": "TEST_04",
+      "scenario": "SME turnover below the historical threshold",
+      "expected_behavior": "Do not declare unconditional exemption; explain the scope and checks."
+    },
+    {
+      "test_id": "TEST_05",
+      "scenario": "Missing turnover period or PAN-wide turnover",
+      "expected_behavior": "Ask for missing information or return REVIEW_REQUIRED."
+    }
+  ],
+  "limitations": [
+    "This benchmark records selected historical notifications, not every subsequent legal change.",
+    "The circular is a related clarification, not a threshold amendment.",
+    "The benchmark does not provide definitive legal advice.",
+    "Verify current primary sources before making a present-day compliance decision."
+  ]
+}

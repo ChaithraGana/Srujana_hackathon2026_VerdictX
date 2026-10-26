@@ -1,0 +1,41 @@
+
+{
+  "case_id": "CASE_B_MAHARASHTRA_FACTORY_WAGES",
+  "tests": [
+    {
+      "test_id": "B01",
+      "description": "Both comparable wage schedules are verified",
+      "expected_result": "CHANGE_DETECTED"
+    },
+    {
+      "test_id": "B02",
+      "description": "Original baseline cannot be verified",
+      "expected_result": "REVIEW_REQUIRED"
+    },
+    {
+      "test_id": "B03",
+      "description": "Employment categories do not match",
+      "expected_result": "REVIEW_REQUIRED"
+    },
+    {
+      "test_id": "B04",
+      "description": "Wage units or zones are missing",
+      "expected_result": "REVIEW_REQUIRED"
+    },
+    {
+      "test_id": "B05",
+      "description": "Only a draft notification is available",
+      "expected_result": "REVIEW_REQUIRED"
+    },
+    {
+      "test_id": "B06",
+      "description": "Verified comparable wage rates are unchanged",
+      "expected_result": "NO_CHANGE_DETECTED"
+    },
+    {
+      "test_id": "B07",
+      "description": "Worker category is missing",
+      "expected_result": "REVIEW_REQUIRED"
+    }
+  ]
+}

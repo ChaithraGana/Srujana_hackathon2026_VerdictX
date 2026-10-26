@@ -1,0 +1,30 @@
+{
+  "case_id": "CASE_B",
+  "status": "REVIEW_REQUIRED",
+  "employment": "Factory employment not covered by another scheduled entry",
+  "baseline": {
+    "notification": "MWA.102002/CR-88/Lab-7",
+    "date": "2004-06-30",
+    "source_type": "Secondary court source",
+    "original_gazette_verified": false,
+    "monthly_wages": {
+      "skilled": [3200, 3000, 2800],
+      "semi-skilled": [3100, 2900, 2700],
+      "unskilled": [3000, 2800, 2600]
+    }
+  },
+  "revised": {
+    "notification": "MWA-42010/CR-1301/Lab-7",
+    "date": "2010-07-20",
+    "effective_date": "2010-07-20",
+    "source_type": "Official Gazette English translation",
+    "source_file": "maharashtra_factory_wages_2010.pdf",
+    "monthly_wages": {
+      "skilled": [5500, 5200, 4900],
+      "semi-skilled": [5000, 4700, 4400],
+      "unskilled": [4500, 4200, 3900]
+    }
+  },
+  "zone_order": ["Zone I", "Zone II", "Zone III"],
+  "wage_unit": "INR per month"
+}

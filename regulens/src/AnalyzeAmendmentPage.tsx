@@ -332,14 +332,14 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
           <h1 style={{ color: 'var(--ivory)', fontSize: '28px', margin: '6px 0 8px' }}>
             Analyze a <em>Regulatory Amendment</em>
           </h1>
-          <p style={{ color: 'rgba(243,239,230,0.85)', fontSize: '14px', maxWidth: '800px', margin: 0, lineHeight: 1.6 }}>
+          <p style={{ color: 'rgba(243,239,230,0.85)', fontSize: '16px', maxWidth: '800px', margin: 0, lineHeight: 1.6 }}>
             Paste or upload any gazette notification, ministry circular, or compliance newsletter.
             Understand verbatim what changed, evaluate deterministic applicability to your enterprise, and generate
             an evidence-backed 15-field compliance action plan with verified deadlines.
           </p>
         </div>
         <div className="page-header-action" style={{ display: 'flex', gap: '8px' }}>
-          <button className="button button-outline" onClick={() => navigate('/compliance-actions')} style={{ fontSize: '13.5px', padding: '10px 18px' }}>
+          <button className="button button-outline" onClick={() => navigate('/compliance-actions')} style={{ fontSize: '15.5px', padding: '10px 18px' }}>
             My Compliance Actions →
           </button>
         </div>
@@ -368,7 +368,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                 background: currentStep === s.num ? 'var(--gold)' : 'transparent',
                 color: currentStep === s.num ? 'var(--navy)' : s.num < currentStep ? '#38d9a9' : 'rgba(248,250,252,0.65)',
                 fontWeight: currentStep === s.num ? 800 : 700,
-                fontSize: '13.5px',
+                fontSize: '15.5px',
                 border: 'none',
                 cursor: (s.num <= currentStep || analysisResult) ? 'pointer' : 'not-allowed',
                 padding: '8px 16px',
@@ -387,12 +387,12 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
 
       {/* Notification Toasts */}
       {errorMessage && (
-        <div style={{ padding: '14px 18px', background: 'rgba(197,64,64,0.18)', border: '1px solid #c54040', borderRadius: '6px', color: '#ffb3b3', marginBottom: '18px', fontSize: '14px' }}>
+        <div style={{ padding: '14px 18px', background: 'rgba(197,64,64,0.18)', border: '1px solid #c54040', borderRadius: '6px', color: '#ffb3b3', marginBottom: '18px', fontSize: '16px' }}>
           <strong>Error:</strong> {errorMessage}
         </div>
       )}
       {successMessage && (
-        <div style={{ padding: '14px 18px', background: 'rgba(66,185,166,0.18)', border: '1px solid #42b9a6', borderRadius: '6px', color: '#a0eedf', marginBottom: '18px', fontSize: '14px' }}>
+        <div style={{ padding: '14px 18px', background: 'rgba(66,185,166,0.18)', border: '1px solid #42b9a6', borderRadius: '6px', color: '#a0eedf', marginBottom: '18px', fontSize: '16px' }}>
           ✓ {successMessage}
         </div>
       )}
@@ -406,12 +406,12 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
           <div className="table-card" style={{ marginBottom: '22px', padding: '22px 26px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
               <div>
-                <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '12px' }}>OFFICIAL STATUTORY BENCHMARKS</span>
+                <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '15px' }}>OFFICIAL STATUTORY BENCHMARKS</span>
                 <h3 style={{ margin: '4px 0 0', fontSize: '20px', color: '#07111f', fontWeight: 700 }}>
                   Standard Regulatory Notifications & Precedents
                 </h3>
               </div>
-              <small style={{ color: '#475569', fontSize: '13px' }}>Load authenticated gazette notifications or circulars</small>
+              <small style={{ color: '#475569', fontSize: '15.5px' }}>Load authenticated gazette notifications or circulars</small>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px' }}>
               {AMENDMENT_SAMPLE_PRESETS.map((p, idx) => (
@@ -423,8 +423,8 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                   style={{ textAlign: 'left', justifyContent: 'flex-start', padding: '12px 16px', height: 'auto', lineHeight: 1.45, color: '#07111f', fontWeight: 600, border: '1px solid rgba(16,24,34,0.15)', borderRadius: '6px' }}
                 >
                   <div>
-                    <strong style={{ display: 'block', fontSize: '14px', color: '#855d14' }}>{p.name}</strong>
-                    <span style={{ fontSize: '12px', color: '#475569' }}>{p.authority}</span>
+                    <strong style={{ display: 'block', fontSize: '16px', color: '#855d14' }}>{p.name}</strong>
+                    <span style={{ fontSize: '15px', color: '#475569' }}>{p.authority}</span>
                   </div>
                 </button>
               ))}
@@ -437,7 +437,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
               type="button"
               className={`button ${activeTab === 'paste' ? 'button-gold' : 'button-outline'}`}
               onClick={() => setActiveTab('paste')}
-              style={{ padding: '8px 20px', fontSize: '13px' }}
+              style={{ padding: '8px 20px', fontSize: '15.5px' }}
             >
               📄 Paste Text / Email
             </button>
@@ -445,7 +445,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
               type="button"
               className={`button ${activeTab === 'upload' ? 'button-gold' : 'button-outline'}`}
               onClick={() => setActiveTab('upload')}
-              style={{ padding: '8px 20px', fontSize: '13px' }}
+              style={{ padding: '8px 20px', fontSize: '15.5px' }}
             >
               📤 Upload Document (PDF / DOCX / TXT / EML)
             </button>
@@ -453,18 +453,18 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
 
           {activeTab === 'paste' ? (
             <div className="table-card" style={{ padding: '24px 28px' }}>
-              <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '12px' }}>DIRECT STATUTORY TEXT INGESTION</span>
+              <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '15px' }}>DIRECT STATUTORY TEXT INGESTION</span>
               <h3 style={{ margin: '4px 0 10px', fontSize: '22px', color: '#07111f', fontWeight: 700 }}>
                 Paste Regulatory Text, Circular, or Email
               </h3>
-              <p style={{ fontSize: '14.5px', color: '#334155', lineHeight: 1.6, marginBottom: '18px' }}>
+              <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.6, marginBottom: '18px' }}>
                 Paste the full notification received via email, ministry newsletter, or official portal. You can paste the entire
                 email body with subject and headers—the engine will heuristically separate noise (signatures, disclaimers) while preserving legal text.
               </p>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '18px', marginBottom: '18px' }}>
                 <div>
-                  <label style={{ display: 'block', fontWeight: 700, fontSize: '14px', color: '#07111f', marginBottom: '8px' }}>
+                  <label style={{ display: 'block', fontWeight: 700, fontSize: '16px', color: '#07111f', marginBottom: '8px' }}>
                     Amendment Text / Email Content <span style={{ color: '#c54040' }}>*</span>
                   </label>
                   <textarea
@@ -472,12 +472,12 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                     value={rawInputText}
                     onChange={(e) => setRawInputText(e.target.value)}
                     placeholder="Paste the gazette circular or full email here (e.g., 'From: ... Subject: ... In exercise of powers under Rule 48(4)...')"
-                    style={{ width: '100%', padding: '14px', borderRadius: '6px', border: '1px solid rgba(16,24,34,0.2)', fontFamily: 'monospace', fontSize: '13.5px', lineHeight: 1.55, background: '#fafafa', color: '#07111f', boxSizing: 'border-box' }}
+                    style={{ width: '100%', padding: '14px', borderRadius: '6px', border: '1px solid rgba(16,24,34,0.2)', fontFamily: 'monospace', fontSize: '15.5px', lineHeight: 1.55, background: '#fafafa', color: '#07111f', boxSizing: 'border-box' }}
                   />
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontWeight: 700, fontSize: '14px', color: '#07111f', marginBottom: '8px' }}>
+                  <label style={{ display: 'block', fontWeight: 700, fontSize: '16px', color: '#07111f', marginBottom: '8px' }}>
                     Original Provision / Previous Version <small style={{ color: '#64748b', fontWeight: 500 }}>(Optional, for word-by-word diff)</small>
                   </label>
                   <textarea
@@ -485,7 +485,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                     value={originalProvisionText}
                     onChange={(e) => setOriginalProvisionText(e.target.value)}
                     placeholder="Paste previous clause wording if available (e.g. 'registered person whose turnover exceeds ten crore rupees...')"
-                    style={{ width: '100%', padding: '14px', borderRadius: '6px', border: '1px solid rgba(16,24,34,0.2)', fontFamily: 'monospace', fontSize: '13.5px', lineHeight: 1.55, background: '#fafafa', color: '#07111f', boxSizing: 'border-box' }}
+                    style={{ width: '100%', padding: '14px', borderRadius: '6px', border: '1px solid rgba(16,24,34,0.2)', fontFamily: 'monospace', fontSize: '15.5px', lineHeight: 1.55, background: '#fafafa', color: '#07111f', boxSizing: 'border-box' }}
                   />
                 </div>
               </div>
@@ -497,7 +497,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                     className="button button-gold"
                     onClick={handleParsePastedText}
                     disabled={isLoading || !rawInputText.trim()}
-                    style={{ padding: '12px 26px', fontSize: '14.5px' }}
+                    style={{ padding: '12px 26px', fontSize: '16px' }}
                   >
                     {isLoading ? 'Processing Text...' : 'Analyze Amendment →'}
                   </button>
@@ -509,7 +509,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                       setOriginalProvisionText('');
                       setCleanAmendmentText('');
                     }}
-                    style={{ padding: '12px 20px', fontSize: '14px' }}
+                    style={{ padding: '12px 20px', fontSize: '16px' }}
                   >
                     Clear
                   </button>
@@ -519,7 +519,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                   className="button button-outline"
                   onClick={handleSaveDraft}
                   disabled={!rawInputText.trim()}
-                  style={{ padding: '12px 20px', fontSize: '14px' }}
+                  style={{ padding: '12px 20px', fontSize: '16px' }}
                 >
                   Save Draft 💾
                 </button>
@@ -527,11 +527,11 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
             </div>
           ) : (
             <div className="table-card" style={{ padding: '24px 28px' }}>
-              <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '12px' }}>OFFICIAL GAZETTE & NOTIFICATION UPLOAD</span>
+              <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '15px' }}>OFFICIAL GAZETTE & NOTIFICATION UPLOAD</span>
               <h3 style={{ margin: '4px 0 10px', fontSize: '22px', color: '#07111f', fontWeight: 700 }}>
                 Upload Amendment Document (PDF, DOCX, TXT, EML)
               </h3>
-              <p style={{ fontSize: '14.5px', color: '#334155', lineHeight: 1.6, marginBottom: '18px' }}>
+              <p style={{ fontSize: '16px', color: '#334155', lineHeight: 1.6, marginBottom: '18px' }}>
                 Extract readable text while preserving document order, section titles, and tables. Protected with 10 MB upload limits and security sanitization.
               </p>
 
@@ -570,12 +570,12 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                 <strong style={{ fontSize: '16px', color: '#07111f', display: 'block' }}>
                   {selectedFile ? selectedFile.name : 'Drag & drop file here or click to browse'}
                 </strong>
-                <small style={{ color: '#64748b', fontSize: '13px', display: 'block', marginTop: '4px' }}>
+                <small style={{ color: '#64748b', fontSize: '15.5px', display: 'block', marginTop: '4px' }}>
                   Supported formats: PDF (native / scanned), DOCX (Word), TXT, EML (Raw email) · Max 10MB
                 </small>
                 {selectedFile && (
                   <div style={{ marginTop: '12px' }}>
-                    <span className="status-pill pill-good" style={{ fontSize: '13px' }}>
+                    <span className="status-pill pill-good" style={{ fontSize: '15.5px' }}>
                       ✓ Selected: {selectedFile.name} ({(selectedFile.size / 1024).toFixed(1)} KB)
                     </span>
                   </div>
@@ -583,7 +583,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
               </div>
 
               {uploadStatus && (
-                <div style={{ padding: '12px 16px', background: 'rgba(200,169,110,0.15)', borderRadius: '6px', fontSize: '13.5px', color: '#855d14', marginBottom: '14px' }}>
+                <div style={{ padding: '12px 16px', background: 'rgba(200,169,110,0.15)', borderRadius: '6px', fontSize: '15.5px', color: '#855d14', marginBottom: '14px' }}>
                   ⏳ {uploadStatus}
                 </div>
               )}
@@ -599,25 +599,25 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
         <div className="table-card" style={{ padding: '24px 28px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
             <div>
-              <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '12px' }}>PARSED STATUTORY SPECIFICATION & METADATA</span>
+              <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '15px' }}>PARSED STATUTORY SPECIFICATION & METADATA</span>
               <h3 style={{ margin: '4px 0 0', fontSize: '22px', color: '#07111f', fontWeight: 700 }}>
                 Verify & Refine Extracted Amendment Metadata
               </h3>
-              <p style={{ margin: '4px 0 0', fontSize: '14px', color: '#334155' }}>
+              <p style={{ margin: '4px 0 0', fontSize: '16px', color: '#334155' }}>
                 Review automatically extracted fields. You can correct any metadata before running the business matching engine.
               </p>
             </div>
             {/* Feature 3: Official Verification Status Badge */}
             <span
               className={`status-pill ${isSourceVerified ? 'pill-good' : 'pill-warn'}`}
-              style={{ fontSize: '13px', padding: '8px 14px', fontWeight: 700 }}
+              style={{ fontSize: '15.5px', padding: '8px 14px', fontWeight: 700 }}
             >
               {isSourceVerified ? '✓ Officially verified source content' : '⚠ Source not independently verified'}
             </span>
           </div>
 
           {extractionWarnings.length > 0 && (
-            <div style={{ padding: '14px 18px', background: 'rgba(240,173,78,0.15)', border: '1px solid #f0ad4e', borderRadius: '6px', color: '#8a6d3b', marginBottom: '18px', fontSize: '13.5px' }}>
+            <div style={{ padding: '14px 18px', background: 'rgba(240,173,78,0.15)', border: '1px solid #f0ad4e', borderRadius: '6px', color: '#8a6d3b', marginBottom: '18px', fontSize: '15.5px' }}>
               <strong>Notice:</strong>
               <ul style={{ margin: '6px 0 0', paddingLeft: '22px' }}>
                 {extractionWarnings.map((w, idx) => <li key={idx}>{w}</li>)}
@@ -627,31 +627,31 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '14px', marginBottom: '16px' }}>
             <div>
-              <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
+              <label style={{ display: 'block', fontSize: '15px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
                 Amendment Title <span style={{ color: '#c54040' }}>*</span>
               </label>
               <input
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '13px' }}
+                style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '15.5px' }}
               />
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
+              <label style={{ display: 'block', fontSize: '15px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
                 Issuing Authority <span style={{ color: '#c54040' }}>*</span>
               </label>
               <input
                 type="text"
                 value={issuingAuthority}
                 onChange={(e) => setIssuingAuthority(e.target.value)}
-                style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '13px' }}
+                style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '15.5px' }}
               />
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
+              <label style={{ display: 'block', fontSize: '15px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
                 Notification / Circular Number
               </label>
               <input
@@ -659,12 +659,12 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                 value={notificationNumber}
                 onChange={(e) => setNotificationNumber(e.target.value)}
                 placeholder="e.g. Notification No. 10/2023 — Central Tax"
-                style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '13px' }}
+                style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '15.5px' }}
               />
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
+              <label style={{ display: 'block', fontSize: '15px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
                 Publication Date
               </label>
               <input
@@ -672,12 +672,12 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                 value={publicationDate}
                 onChange={(e) => setPublicationDate(e.target.value)}
                 placeholder="e.g. 10 May 2023"
-                style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '13px' }}
+                style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '15.5px' }}
               />
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
+              <label style={{ display: 'block', fontSize: '15px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
                 Effective Date (Commencement)
               </label>
               <input
@@ -685,12 +685,12 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                 value={effectiveDate}
                 onChange={(e) => setEffectiveDate(e.target.value)}
                 placeholder="e.g. 01 August 2023"
-                style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '13px' }}
+                style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '15.5px' }}
               />
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
+              <label style={{ display: 'block', fontSize: '15px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
                 Official Source URL
               </label>
               <input
@@ -703,25 +703,25 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                   setSourceStatusBadge(isGov ? 'Officially verified source content' : 'Source not independently verified');
                 }}
                 placeholder="https://..."
-                style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '13px' }}
+                style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '15.5px' }}
               />
             </div>
           </div>
 
           <div style={{ marginBottom: '16px' }}>
-            <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
+            <label style={{ display: 'block', fontSize: '15px', fontWeight: 700, color: '#07111f', marginBottom: '4px' }}>
               Extracted Legal Text (Cleaned & Separated from Email Noise)
             </label>
             <textarea
               rows={8}
               value={cleanAmendmentText}
               onChange={(e) => setCleanAmendmentText(e.target.value)}
-              style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontFamily: 'monospace', fontSize: '12px', lineHeight: 1.5, background: '#fafafa', color: '#07111f' }}
+              style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontFamily: 'monospace', fontSize: '15px', lineHeight: 1.5, background: '#fafafa', color: '#07111f' }}
             />
           </div>
 
           {(separatedSignatures.length > 0 || separatedDisclaimers.length > 0) && (
-            <div style={{ padding: '10px 14px', background: '#f1f5f9', border: '1px solid #cbd5e1', borderRadius: '4px', marginBottom: '16px', fontSize: '12px', color: '#475569' }}>
+            <div style={{ padding: '10px 14px', background: '#f1f5f9', border: '1px solid #cbd5e1', borderRadius: '4px', marginBottom: '16px', fontSize: '15px', color: '#475569' }}>
               <strong>Preserved Non-Legal Email Elements (Separated without deletion):</strong>
               {separatedSignatures.length > 0 && <div>Signatures detected: {separatedSignatures.join(' | ')}</div>}
               {separatedDisclaimers.length > 0 && <div>Disclaimers separated: {separatedDisclaimers.length} clauses</div>}
@@ -740,7 +740,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                 className="button button-gold"
                 onClick={handleRunAnalysis}
                 disabled={isLoading || !cleanAmendmentText.trim()}
-                style={{ padding: '10px 26px', fontSize: '14px' }}
+                style={{ padding: '10px 26px', fontSize: '16px' }}
               >
                 {isLoading ? 'Running Compliance Engine...' : 'Run Business Impact & Diff →'}
               </button>
@@ -756,17 +756,17 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
         <div className="table-card" style={{ padding: '24px 28px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px', flexWrap: 'wrap', gap: '10px' }}>
             <div>
-              <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '12px' }}>REGULATORY DELTA & THRESHOLD COMPARISON</span>
+              <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '15px' }}>REGULATORY DELTA & THRESHOLD COMPARISON</span>
               <h3 style={{ margin: '4px 0 0', fontSize: '22px', color: '#07111f', fontWeight: 700 }}>
                 Textual & Threshold Comparison
               </h3>
-              <p style={{ margin: '4px 0 0', fontSize: '14.5px', color: '#334155', lineHeight: 1.6 }}>
+              <p style={{ margin: '4px 0 0', fontSize: '16px', color: '#334155', lineHeight: 1.6 }}>
                 {analysisResult.legal_diff.summary_of_change}
               </p>
             </div>
             <div style={{ display: 'flex', gap: '8px' }}>
-              <span className="status-pill pill-neutral" style={{ background: 'rgba(214,69,69,0.15)', color: '#b91c1c', fontSize: '12px', fontWeight: 700 }}>Red: Deletions</span>
-              <span className="status-pill pill-neutral" style={{ background: 'rgba(46,125,50,0.15)', color: '#15803d', fontSize: '12px', fontWeight: 700 }}>Green: Additions</span>
+              <span className="status-pill pill-neutral" style={{ background: 'rgba(214,69,69,0.15)', color: '#b91c1c', fontSize: '15px', fontWeight: 700 }}>Red: Deletions</span>
+              <span className="status-pill pill-neutral" style={{ background: 'rgba(46,125,50,0.15)', color: '#15803d', fontSize: '15px', fontWeight: 700 }}>Green: Additions</span>
             </div>
           </div>
 
@@ -775,7 +775,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
               <strong style={{ color: '#855d14', fontSize: '15px', display: 'block', marginBottom: '6px' }}>
                 Original Provision Not Supplied:
               </strong>
-              <p style={{ margin: 0, fontSize: '14px', color: '#334155', lineHeight: 1.6 }}>
+              <p style={{ margin: 0, fontSize: '16px', color: '#334155', lineHeight: 1.6 }}>
                 {analysisResult.legal_diff.explanation_when_missing}
               </p>
             </div>
@@ -783,10 +783,10 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '18px', marginBottom: '22px' }}>
               {/* Previous version */}
               <div style={{ background: '#fdfbf7', border: '1px solid rgba(16,24,34,0.14)', borderRadius: '8px', padding: '18px' }}>
-                <span className="small-label" style={{ color: '#b91c1c', fontWeight: 800, fontSize: '12px', display: 'block', marginBottom: '10px' }}>
+                <span className="small-label" style={{ color: '#b91c1c', fontWeight: 800, fontSize: '15px', display: 'block', marginBottom: '10px' }}>
                   PREVIOUS PROVISION (ORIGINAL STATUTE)
                 </span>
-                <div style={{ fontFamily: 'monospace', fontSize: '13.5px', lineHeight: 1.65 }}>
+                <div style={{ fontFamily: 'monospace', fontSize: '15.5px', lineHeight: 1.65 }}>
                   {analysisResult.legal_diff.previous_rows.map((row, i) => (
                     <div
                       key={i}
@@ -807,10 +807,10 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
 
               {/* Amended version */}
               <div style={{ background: '#fdfbf7', border: '1px solid rgba(16,24,34,0.14)', borderRadius: '8px', padding: '18px' }}>
-                <span className="small-label" style={{ color: '#15803d', fontWeight: 800, fontSize: '12px', display: 'block', marginBottom: '10px' }}>
+                <span className="small-label" style={{ color: '#15803d', fontWeight: 800, fontSize: '15px', display: 'block', marginBottom: '10px' }}>
                   AMENDED PROVISION (ENACTED LAW)
                 </span>
-                <div style={{ fontFamily: 'monospace', fontSize: '13.5px', lineHeight: 1.65 }}>
+                <div style={{ fontFamily: 'monospace', fontSize: '15.5px', lineHeight: 1.65 }}>
                   {analysisResult.legal_diff.amended_rows.map((row, i) => (
                     <div
                       key={i}
@@ -841,13 +841,13 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                 {analysisResult.legal_diff.detected_changes.map((ch, idx) => (
                   <div key={idx} style={{ padding: '14px 16px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '8px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                      <strong style={{ fontSize: '14.5px', color: '#07111f' }}>{ch.clause}</strong>
-                      <span className="status-pill pill-warn" style={{ fontSize: '11.5px', fontWeight: 700 }}>{ch.type.toUpperCase()}</span>
+                      <strong style={{ fontSize: '16px', color: '#07111f' }}>{ch.clause}</strong>
+                      <span className="status-pill pill-warn" style={{ fontSize: '14.5px', fontWeight: 700 }}>{ch.type.toUpperCase()}</span>
                     </div>
-                    <div style={{ fontSize: '14px', color: '#334155', marginBottom: '6px', lineHeight: 1.55 }}>
+                    <div style={{ fontSize: '16px', color: '#334155', marginBottom: '6px', lineHeight: 1.55 }}>
                       <strong style={{ color: '#0a1628' }}>Impact:</strong> {ch.plain_english_explanation} — {ch.potential_business_impact}
                     </div>
-                    <small style={{ color: '#64748b', fontSize: '12px' }}>Source Reference: {ch.source_reference}</small>
+                    <small style={{ color: '#64748b', fontSize: '15px' }}>Source Reference: {ch.source_reference}</small>
                   </div>
                 ))}
               </div>
@@ -855,10 +855,10 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
           )}
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
-            <button className="button button-outline" onClick={() => setCurrentStep(2)} style={{ padding: '12px 20px', fontSize: '14px' }}>
+            <button className="button button-outline" onClick={() => setCurrentStep(2)} style={{ padding: '12px 20px', fontSize: '16px' }}>
               ← Back to Review Content
             </button>
-            <button className="button button-gold" onClick={() => setCurrentStep(4)} style={{ padding: '12px 24px', fontSize: '14.5px' }}>
+            <button className="button button-gold" onClick={() => setCurrentStep(4)} style={{ padding: '12px 24px', fontSize: '16px' }}>
               Evaluate Business Applicability →
             </button>
           </div>
@@ -870,13 +870,13 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
       {/* ========================================================================= */}
       {currentStep === 4 && analysisResult && (
         <div className="table-card" style={{ padding: '24px 28px' }}>
-          <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '12px' }}>ENTERPRISE APPLICABILITY MATRIX</span>
+          <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '15px' }}>ENTERPRISE APPLICABILITY MATRIX</span>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
             <div>
               <h3 style={{ margin: '4px 0 0', fontSize: '22px', color: '#07111f', fontWeight: 700 }}>
                 Enterprise Applicability Assessment
               </h3>
-              <p style={{ margin: '4px 0 0', fontSize: '14px', color: '#334155' }}>
+              <p style={{ margin: '4px 0 0', fontSize: '16px', color: '#334155' }}>
                 Evaluated deterministically against active enterprise profile: <strong>{analysisResult.profile_snapshot?.name}</strong>
               </p>
             </div>
@@ -918,7 +918,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
             <strong style={{ fontSize: '16px', color: '#07111f', display: 'block', marginBottom: '6px' }}>
               {analysisResult.applicability.headline}
             </strong>
-            <p style={{ margin: 0, fontSize: '13.5px', color: '#1e293b', lineHeight: 1.6 }}>
+            <p style={{ margin: 0, fontSize: '15.5px', color: '#1e293b', lineHeight: 1.6 }}>
               {analysisResult.applicability.reason}
             </p>
           </div>
@@ -927,28 +927,28 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '14px', marginBottom: '20px' }}>
             <div style={{ padding: '12px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px' }}>
               <span className="small-label" style={{ color: '#785116', fontWeight: 700 }}>1. STATUTORY CONDITIONS CONSIDERED</span>
-              <ul style={{ margin: '6px 0 0', paddingLeft: '18px', fontSize: '12px', color: '#334155' }}>
+              <ul style={{ margin: '6px 0 0', paddingLeft: '18px', fontSize: '15px', color: '#334155' }}>
                 {analysisResult.applicability.statutory_conditions_considered.map((c, i) => <li key={i}>{c}</li>)}
               </ul>
             </div>
 
             <div style={{ padding: '12px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px' }}>
               <span className="small-label" style={{ color: '#785116', fontWeight: 700 }}>2. BUSINESS FACTS USED</span>
-              <ul style={{ margin: '6px 0 0', paddingLeft: '18px', fontSize: '12px', color: '#334155' }}>
+              <ul style={{ margin: '6px 0 0', paddingLeft: '18px', fontSize: '15px', color: '#334155' }}>
                 {analysisResult.applicability.business_facts_used.map((f, i) => <li key={i}>{f}</li>)}
               </ul>
             </div>
 
             <div style={{ padding: '12px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px' }}>
               <span className="small-label" style={{ color: '#785116', fontWeight: 700 }}>3. MISSING FACTS / ASSUMPTIONS</span>
-              <ul style={{ margin: '6px 0 0', paddingLeft: '18px', fontSize: '12px', color: '#334155' }}>
+              <ul style={{ margin: '6px 0 0', paddingLeft: '18px', fontSize: '15px', color: '#334155' }}>
                 {analysisResult.applicability.missing_facts_or_assumptions.map((m, i) => <li key={i}>{m}</li>)}
               </ul>
             </div>
 
             <div style={{ padding: '12px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px' }}>
               <span className="small-label" style={{ color: '#785116', fontWeight: 700 }}>4. EXCEPTIONS / EXEMPTIONS</span>
-              <ul style={{ margin: '6px 0 0', paddingLeft: '18px', fontSize: '12px', color: '#334155' }}>
+              <ul style={{ margin: '6px 0 0', paddingLeft: '18px', fontSize: '15px', color: '#334155' }}>
                 {analysisResult.applicability.relevant_exceptions_or_exemptions.map((e, i) => <li key={i}>{e}</li>)}
               </ul>
             </div>
@@ -957,21 +957,21 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '14px', marginBottom: '20px' }}>
             <div style={{ padding: '12px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px' }}>
               <span className="small-label" style={{ color: '#785116', fontWeight: 700 }}>5. EFFECTIVE DATE & TRANSITION</span>
-              <div style={{ fontSize: '13px', color: '#07111f', marginTop: '4px', fontWeight: 700 }}>
+              <div style={{ fontSize: '15.5px', color: '#07111f', marginTop: '4px', fontWeight: 700 }}>
                 {analysisResult.applicability.effective_date}
               </div>
             </div>
 
             <div style={{ padding: '12px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px' }}>
               <span className="small-label" style={{ color: '#785116', fontWeight: 700 }}>6. SUPPORTING STATUTORY PROVISION</span>
-              <div style={{ fontSize: '12.5px', color: '#07111f', marginTop: '4px' }}>
+              <div style={{ fontSize: '15px', color: '#07111f', marginTop: '4px' }}>
                 {analysisResult.applicability.source_provisions}
               </div>
             </div>
 
             <div style={{ padding: '12px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px' }}>
               <span className="small-label" style={{ color: '#785116', fontWeight: 700 }}>7. EVIDENCE QUALITY & RELIABILITY</span>
-              <div style={{ fontSize: '12px', color: '#334155', marginTop: '4px' }}>
+              <div style={{ fontSize: '15px', color: '#334155', marginTop: '4px' }}>
                 {analysisResult.applicability.evidence_quality_explanation} (Confidence: {Math.round(analysisResult.applicability.confidence_score * 100)}%)
               </div>
             </div>
@@ -983,10 +983,10 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
               <h4 style={{ margin: '0 0 8px', color: '#07111f', fontSize: '15px' }}>
                 Non-Applicability Justification & Evidence Retention Guide
               </h4>
-              <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.6, marginBottom: '10px' }}>
+              <p style={{ fontSize: '15.5px', color: '#475569', lineHeight: 1.6, marginBottom: '10px' }}>
                 <strong>Evidence Retention:</strong> {analysisResult.non_applicability_rationale.evidence_retention_advice}
               </p>
-              <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.6, margin: 0 }}>
+              <p style={{ fontSize: '15.5px', color: '#475569', lineHeight: 1.6, margin: 0 }}>
                 <strong>Monitoring:</strong> {analysisResult.non_applicability_rationale.monitoring_recommendation}
               </p>
             </div>
@@ -998,10 +998,10 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
               <h4 style={{ margin: '0 0 8px', color: '#8a6d3b', fontSize: '15px' }}>
                 Clarification Checklist (Unresolved Statutory Questions)
               </h4>
-              <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.6, marginBottom: '10px' }}>
+              <p style={{ fontSize: '15.5px', color: '#475569', lineHeight: 1.6, marginBottom: '10px' }}>
                 <strong>Unresolved Question:</strong> {analysisResult.clarification_checklist.unresolved_legal_question}
               </p>
-              <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.6, margin: 0 }}>
+              <p style={{ fontSize: '15.5px', color: '#475569', lineHeight: 1.6, margin: 0 }}>
                 <strong>Next Step:</strong> {analysisResult.clarification_checklist.next_recommended_step} (Verifier: {analysisResult.clarification_checklist.who_could_verify_it})
               </p>
             </div>
@@ -1025,15 +1025,15 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
         <div className="table-card" style={{ padding: '24px 28px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px', flexWrap: 'wrap', gap: '10px' }}>
             <div>
-              <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '12px' }}>MANDATED COMPLIANCE IMPLEMENTATION SCHEDULE</span>
+              <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '15px' }}>MANDATED COMPLIANCE IMPLEMENTATION SCHEDULE</span>
               <h3 style={{ margin: '4px 0 0', fontSize: '22px', color: '#07111f', fontWeight: 700 }}>
                 Enterprise Compliance Action Plan ({actionItems.length} Actions)
               </h3>
-              <p style={{ margin: '4px 0 0', fontSize: '14.5px', color: '#334155' }}>
+              <p style={{ margin: '4px 0 0', fontSize: '16px', color: '#334155' }}>
                 Every action contains all 15 statutory fields: exact task, responsible person, deadline derivation, documents required, and statutory penalty risks.
               </p>
             </div>
-            <button className="button button-gold" onClick={() => setCurrentStep(6)} style={{ padding: '10px 20px', fontSize: '14px' }}>
+            <button className="button button-gold" onClick={() => setCurrentStep(6)} style={{ padding: '10px 20px', fontSize: '16px' }}>
               Track in Compliance Dashboard →
             </button>
           </div>
@@ -1061,16 +1061,16 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px', marginBottom: '12px' }}>
                     <div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '6px' }}>
-                        <span className="mono" style={{ fontSize: '12.5px', color: '#855d14', fontWeight: 700 }}>{act.id}</span>
+                        <span className="mono" style={{ fontSize: '15px', color: '#855d14', fontWeight: 700 }}>{act.id}</span>
                         <span
                           className={`status-pill ${
                             act.priority === 'Critical' ? 'pill-bad' : act.priority === 'High' ? 'pill-warn' : 'pill-neutral'
                           }`}
-                          style={{ fontSize: '12px', fontWeight: 700 }}
+                          style={{ fontSize: '15px', fontWeight: 700 }}
                         >
                           {act.priority} Priority
                         </span>
-                        <span className="status-pill pill-neutral" style={{ fontSize: '12px', color: '#1e293b' }}>
+                        <span className="status-pill pill-neutral" style={{ fontSize: '15px', color: '#1e293b' }}>
                           Role: {act.who_should_perform}
                         </span>
                       </div>
@@ -1086,7 +1086,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                         act.completion_status === 'Completed' ? 'button-outline' : 'button-gold'
                       }`}
                       onClick={() => handleToggleStatus(act)}
-                      style={{ fontSize: '13px', padding: '8px 16px' }}
+                      style={{ fontSize: '15.5px', padding: '8px 16px' }}
                     >
                       Status: {act.completion_status} (Click to toggle)
                     </button>
@@ -1094,39 +1094,39 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
 
                   {/* Why required & specific task */}
                   <div style={{ marginBottom: '14px' }}>
-                    <p style={{ margin: '0 0 8px', fontSize: '14.5px', color: '#334155', lineHeight: 1.55 }}>
+                    <p style={{ margin: '0 0 8px', fontSize: '16px', color: '#334155', lineHeight: 1.55 }}>
                       <strong style={{ color: '#0a1628' }}>Why Required:</strong> {act.why_required}
                     </p>
-                    <p style={{ margin: 0, fontSize: '14.5px', color: '#07111f', lineHeight: 1.6, background: '#f8fafc', padding: '12px 16px', borderRadius: '6px', borderLeft: '4px solid #855d14' }}>
+                    <p style={{ margin: 0, fontSize: '16px', color: '#07111f', lineHeight: 1.6, background: '#f8fafc', padding: '12px 16px', borderRadius: '6px', borderLeft: '4px solid #855d14' }}>
                       <strong style={{ color: '#855d14' }}>Specific Task:</strong> {act.specific_task}
                     </p>
                   </div>
 
                   {/* 15 Fields Grid Breakdown */}
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '12px', fontSize: '13px', background: '#fdfbf7', padding: '14px 16px', borderRadius: '6px', border: '1px solid rgba(16,24,34,0.08)' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '12px', fontSize: '15.5px', background: '#fdfbf7', padding: '14px 16px', borderRadius: '6px', border: '1px solid rgba(16,24,34,0.08)' }}>
                     <div>
-                      <strong style={{ color: '#855d14', fontSize: '13px' }}>Deadline:</strong> <span style={{ color: '#0a1628', fontWeight: 600 }}>{act.deadline}</span>
+                      <strong style={{ color: '#855d14', fontSize: '15.5px' }}>Deadline:</strong> <span style={{ color: '#0a1628', fontWeight: 600 }}>{act.deadline}</span>
                       <br />
-                      <small style={{ color: '#64748b', fontSize: '12px' }}>Calc: {act.deadline_calculation}</small>
+                      <small style={{ color: '#64748b', fontSize: '15px' }}>Calc: {act.deadline_calculation}</small>
                     </div>
                     <div>
-                      <strong style={{ color: '#855d14', fontSize: '13px' }}>Where to Complete:</strong> <span style={{ color: '#0a1628', fontWeight: 600 }}>{act.where_to_complete}</span>
+                      <strong style={{ color: '#855d14', fontSize: '15.5px' }}>Where to Complete:</strong> <span style={{ color: '#0a1628', fontWeight: 600 }}>{act.where_to_complete}</span>
                       <br />
-                      <small style={{ color: '#64748b', fontSize: '12px' }}>Provision: {act.applicable_provision}</small>
+                      <small style={{ color: '#64748b', fontSize: '15px' }}>Provision: {act.applicable_provision}</small>
                     </div>
                     <div>
-                      <strong style={{ color: '#855d14', fontSize: '13px' }}>Expected Output:</strong> <span style={{ color: '#0a1628', fontWeight: 600 }}>{act.expected_output}</span>
+                      <strong style={{ color: '#855d14', fontSize: '15.5px' }}>Expected Output:</strong> <span style={{ color: '#0a1628', fontWeight: 600 }}>{act.expected_output}</span>
                       <br />
-                      <small style={{ color: '#64748b', fontSize: '12px' }}>Evidence required for audit</small>
+                      <small style={{ color: '#64748b', fontSize: '15px' }}>Evidence required for audit</small>
                     </div>
                     <div>
-                      <strong style={{ color: '#b91c1c', fontSize: '13px' }}>Risk of Missing:</strong> <span style={{ color: '#7f1d1d' }}>{act.risk_of_missing}</span>
+                      <strong style={{ color: '#b91c1c', fontSize: '15.5px' }}>Risk of Missing:</strong> <span style={{ color: '#7f1d1d' }}>{act.risk_of_missing}</span>
                     </div>
                   </div>
 
                   {/* Documents Required */}
                   {act.documents_required && act.documents_required.length > 0 && (
-                    <div style={{ marginTop: '10px', fontSize: '13px', color: '#475569' }}>
+                    <div style={{ marginTop: '10px', fontSize: '15.5px', color: '#475569' }}>
                       <strong style={{ color: '#0a1628' }}>Documents Required:</strong> {act.documents_required.join(' · ')}
                     </div>
                   )}
@@ -1136,10 +1136,10 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
           )}
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
-            <button className="button button-outline" onClick={() => setCurrentStep(4)} style={{ padding: '12px 20px', fontSize: '14px' }}>
+            <button className="button button-outline" onClick={() => setCurrentStep(4)} style={{ padding: '12px 20px', fontSize: '16px' }}>
               ← Back to Applicability
             </button>
-            <button className="button button-gold" onClick={() => setCurrentStep(6)} style={{ padding: '12px 24px', fontSize: '14.5px' }}>
+            <button className="button button-gold" onClick={() => setCurrentStep(6)} style={{ padding: '12px 24px', fontSize: '16px' }}>
               Open Full Compliance Progress Dashboard →
             </button>
           </div>
@@ -1154,16 +1154,16 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
           <div className="table-card" style={{ marginBottom: '22px', padding: '24px 28px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
               <div>
-                <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '12px' }}>OPERATIONAL COMPLIANCE EXECUTION LOG</span>
+                <span className="small-label" style={{ color: '#855d14', fontWeight: 800, fontSize: '15px' }}>OPERATIONAL COMPLIANCE EXECUTION LOG</span>
                 <h3 style={{ margin: '4px 0 0', fontSize: '22px', color: '#07111f', fontWeight: 700 }}>
                   Active Compliance Tasks & Evidence Locker
                 </h3>
-                <p style={{ margin: '4px 0 0', fontSize: '14px', color: '#334155' }}>
+                <p style={{ margin: '4px 0 0', fontSize: '16px', color: '#334155' }}>
                   Manage task statuses, add audit notes, and assign responsibilities across your compliance team.
                 </p>
               </div>
               <div style={{ display: 'flex', gap: '8px' }}>
-                <button className="button button-gold" onClick={() => navigate('/compliance-actions')} style={{ padding: '10px 18px', fontSize: '13.5px' }}>
+                <button className="button button-gold" onClick={() => navigate('/compliance-actions')} style={{ padding: '10px 18px', fontSize: '15.5px' }}>
                   View Dedicated 'My Compliance Actions' Page →
                 </button>
               </div>
@@ -1186,28 +1186,28 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                   {actionItems.map((act) => (
                     <tr key={act.id}>
                       <td>
-                        <strong style={{ fontSize: '14px', color: '#07111f' }}>{act.action_title}</strong>
+                        <strong style={{ fontSize: '16px', color: '#07111f' }}>{act.action_title}</strong>
                         <br />
-                        <small style={{ color: '#64748b', fontSize: '12px' }}>{act.applicable_provision}</small>
+                        <small style={{ color: '#64748b', fontSize: '15px' }}>{act.applicable_provision}</small>
                       </td>
                       <td>
                         <span
                           className={`status-pill ${
                             act.priority === 'Critical' ? 'pill-bad' : act.priority === 'High' ? 'pill-warn' : 'pill-neutral'
                           }`}
-                          style={{ fontSize: '12px' }}
+                          style={{ fontSize: '15px' }}
                         >
                           {act.priority}
                         </span>
                       </td>
-                      <td style={{ fontSize: '13.5px', fontWeight: 600 }}>{act.deadline}</td>
-                      <td style={{ fontSize: '13.5px' }}>{act.who_should_perform}</td>
+                      <td style={{ fontSize: '15.5px', fontWeight: 600 }}>{act.deadline}</td>
+                      <td style={{ fontSize: '15.5px' }}>{act.who_should_perform}</td>
                       <td>
                         <span
                           className={`status-pill ${
                             act.completion_status === 'Completed' ? 'pill-good' : act.completion_status === 'In Progress' ? 'pill-warn' : 'pill-neutral'
                           }`}
-                          style={{ fontSize: '12px', fontWeight: 700 }}
+                          style={{ fontSize: '15px', fontWeight: 700 }}
                         >
                           {act.completion_status}
                         </span>
@@ -1217,7 +1217,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                           type="button"
                           className="button button-outline"
                           onClick={() => handleToggleStatus(act)}
-                          style={{ fontSize: '12.5px', padding: '6px 12px' }}
+                          style={{ fontSize: '15px', padding: '6px 12px' }}
                         >
                           Update Status
                         </button>
@@ -1240,7 +1240,7 @@ export function AnalyzeAmendmentPage({ navigate }: { navigate: (path: string) =>
                 </small>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span className="mono" style={{ fontSize: '12px' }}>
+                <span className="mono" style={{ fontSize: '15px' }}>
                   {analysisResult.proofpath_record.sha256_digest}
                 </span>
                 <button

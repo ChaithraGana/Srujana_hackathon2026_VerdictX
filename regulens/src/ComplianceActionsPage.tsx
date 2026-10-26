@@ -101,7 +101,7 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
           <h1 style={{ color: 'var(--ivory)', fontSize: '28px', margin: '6px 0 8px' }}>
             My Compliance <em>Actions</em>
           </h1>
-          <p style={{ color: 'rgba(243,239,230,0.85)', fontSize: '14px', maxWidth: '800px', margin: 0, lineHeight: 1.6 }}>
+          <p style={{ color: 'rgba(243,239,230,0.85)', fontSize: '16px', maxWidth: '800px', margin: 0, lineHeight: 1.6 }}>
             Track, assign, and document every statutory compliance action generated from gazette amendments.
             All statuses are stored as user-reported records with tamper-evident Section 65B hash chains.
           </p>
@@ -114,7 +114,7 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
       </div>
 
       {successToast && (
-        <div style={{ padding: '12px 16px', background: 'rgba(66,185,166,0.18)', border: '1px solid #42b9a6', borderRadius: '6px', color: '#a0eedf', marginBottom: '18px', fontSize: '13px' }}>
+        <div style={{ padding: '12px 16px', background: 'rgba(66,185,166,0.18)', border: '1px solid #42b9a6', borderRadius: '6px', color: '#a0eedf', marginBottom: '18px', fontSize: '15.5px' }}>
           ✓ {successToast}
         </div>
       )}
@@ -122,27 +122,27 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
       {/* Metric Cards Row */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '14px', marginBottom: '24px' }}>
         <div style={{ padding: '14px 18px', background: '#ffffff', borderRadius: '8px', border: '1px solid rgba(16,24,34,0.12)', boxShadow: '0 2px 6px rgba(0,0,0,0.03)' }}>
-          <span style={{ fontSize: '11.5px', color: '#64748b', fontWeight: 700, textTransform: 'uppercase' }}>Total Actions</span>
+          <span style={{ fontSize: '14.5px', color: '#64748b', fontWeight: 700, textTransform: 'uppercase' }}>Total Actions</span>
           <div style={{ fontSize: '26px', fontWeight: 800, color: '#07111f', marginTop: '4px' }}>{counts.total}</div>
-          <small style={{ color: '#64748b', fontSize: '11px' }}>Active statutory cards</small>
+          <small style={{ color: '#64748b', fontSize: '14.5px' }}>Active statutory cards</small>
         </div>
 
         <div style={{ padding: '14px 18px', background: '#ffffff', borderRadius: '8px', border: '1px solid rgba(16,24,34,0.12)', boxShadow: '0 2px 6px rgba(0,0,0,0.03)' }}>
-          <span style={{ fontSize: '11.5px', color: '#64748b', fontWeight: 700, textTransform: 'uppercase' }}>Not Started</span>
+          <span style={{ fontSize: '14.5px', color: '#64748b', fontWeight: 700, textTransform: 'uppercase' }}>Not Started</span>
           <div style={{ fontSize: '26px', fontWeight: 800, color: '#c54040', marginTop: '4px' }}>{counts.pending}</div>
-          <small style={{ color: '#64748b', fontSize: '11px' }}>Pending execution</small>
+          <small style={{ color: '#64748b', fontSize: '14.5px' }}>Pending execution</small>
         </div>
 
         <div style={{ padding: '14px 18px', background: '#ffffff', borderRadius: '8px', border: '1px solid rgba(16,24,34,0.12)', boxShadow: '0 2px 6px rgba(0,0,0,0.03)' }}>
-          <span style={{ fontSize: '11.5px', color: '#64748b', fontWeight: 700, textTransform: 'uppercase' }}>In Progress</span>
+          <span style={{ fontSize: '14.5px', color: '#64748b', fontWeight: 700, textTransform: 'uppercase' }}>In Progress</span>
           <div style={{ fontSize: '26px', fontWeight: 800, color: '#855d14', marginTop: '4px' }}>{counts.inProgress}</div>
-          <small style={{ color: '#64748b', fontSize: '11px' }}>Under review / testing</small>
+          <small style={{ color: '#64748b', fontSize: '14.5px' }}>Under review / testing</small>
         </div>
 
         <div style={{ padding: '14px 18px', background: '#ffffff', borderRadius: '8px', border: '1px solid rgba(16,24,34,0.12)', boxShadow: '0 2px 6px rgba(0,0,0,0.03)' }}>
-          <span style={{ fontSize: '11.5px', color: '#64748b', fontWeight: 700, textTransform: 'uppercase' }}>Completed</span>
+          <span style={{ fontSize: '14.5px', color: '#64748b', fontWeight: 700, textTransform: 'uppercase' }}>Completed</span>
           <div style={{ fontSize: '26px', fontWeight: 800, color: '#2e7d32', marginTop: '4px' }}>{counts.completed}</div>
-          <small style={{ color: '#64748b', fontSize: '11px' }}>User-reported completion</small>
+          <small style={{ color: '#64748b', fontSize: '14.5px' }}>User-reported completion</small>
         </div>
       </div>
 
@@ -155,17 +155,17 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
               placeholder="Search actions by task title, provision, or responsible person..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              style={{ width: '100%', padding: '8px 12px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '13px' }}
+              style={{ width: '100%', padding: '8px 12px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '15.5px' }}
             />
           </div>
 
           <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <label style={{ fontSize: '12px', fontWeight: 700, color: '#07111f' }}>Status:</label>
+              <label style={{ fontSize: '15px', fontWeight: 700, color: '#07111f' }}>Status:</label>
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                style={{ padding: '6px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '12.5px' }}
+                style={{ padding: '6px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '15px' }}
               >
                 <option value="All">All Statuses</option>
                 <option value="Not Started">Not Started</option>
@@ -176,11 +176,11 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <label style={{ fontSize: '12px', fontWeight: 700, color: '#07111f' }}>Priority:</label>
+              <label style={{ fontSize: '15px', fontWeight: 700, color: '#07111f' }}>Priority:</label>
               <select
                 value={priorityFilter}
                 onChange={(e) => setPriorityFilter(e.target.value)}
-                style={{ padding: '6px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '12.5px' }}
+                style={{ padding: '6px 10px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.2)', fontSize: '15px' }}
               >
                 <option value="All">All Priorities</option>
                 <option value="Critical">Critical</option>
@@ -197,7 +197,7 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
         {filteredActions.length === 0 ? (
           <div className="table-card" style={{ padding: '36px', textAlign: 'center' }}>
-            <p style={{ color: '#64748b', fontSize: '14px', margin: 0 }}>
+            <p style={{ color: '#64748b', fontSize: '16px', margin: 0 }}>
               No compliance actions match the selected filter criteria.
             </p>
           </div>
@@ -216,16 +216,16 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px', marginBottom: '8px' }}>
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                    <span className="mono" style={{ fontSize: '11px', color: '#855d14', fontWeight: 700 }}>{act.id}</span>
+                    <span className="mono" style={{ fontSize: '14.5px', color: '#855d14', fontWeight: 700 }}>{act.id}</span>
                     <span
                       className={`status-pill ${
                         act.priority === 'Critical' ? 'pill-bad' : act.priority === 'High' ? 'pill-warn' : 'pill-neutral'
                       }`}
-                      style={{ fontSize: '10.5px' }}
+                      style={{ fontSize: '14px' }}
                     >
                       {act.priority}
                     </span>
-                    <span className="status-pill pill-neutral" style={{ fontSize: '10.5px' }}>
+                    <span className="status-pill pill-neutral" style={{ fontSize: '14px' }}>
                       Assignee: {act.assigned_to || act.who_should_perform}
                     </span>
                   </div>
@@ -243,7 +243,7 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
                       padding: '6px 12px',
                       borderRadius: '4px',
                       fontWeight: 700,
-                      fontSize: '12px',
+                      fontSize: '15px',
                       background:
                         act.completion_status === 'Completed'
                           ? 'rgba(46,125,50,0.15)'
@@ -273,7 +273,7 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
                       setEditingNotes(act.notes || '');
                       setEditingAssignee(act.assigned_to || act.who_should_perform);
                     }}
-                    style={{ fontSize: '12px' }}
+                    style={{ fontSize: '15px' }}
                   >
                     Details & Notes
                   </button>
@@ -281,12 +281,12 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
               </div>
 
               {/* Specific Task */}
-              <p style={{ margin: '0 0 10px', fontSize: '13px', color: '#334155', lineHeight: 1.55 }}>
+              <p style={{ margin: '0 0 10px', fontSize: '15.5px', color: '#334155', lineHeight: 1.55 }}>
                 {act.specific_task}
               </p>
 
               {/* 15 Fields Details Summary */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px', fontSize: '11.5px', background: '#fdfbf7', padding: '10px 14px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.08)' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px', fontSize: '14.5px', background: '#fdfbf7', padding: '10px 14px', borderRadius: '4px', border: '1px solid rgba(16,24,34,0.08)' }}>
                 <div>
                   <strong style={{ color: '#785116' }}>Due Date:</strong> {act.deadline}
                   <br />
@@ -308,7 +308,7 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
               </div>
 
               {act.notes && (
-                <div style={{ marginTop: '8px', padding: '6px 10px', background: '#f1f5f9', borderRadius: '4px', fontSize: '11.5px', color: '#475569' }}>
+                <div style={{ marginTop: '8px', padding: '6px 10px', background: '#f1f5f9', borderRadius: '4px', fontSize: '14.5px', color: '#475569' }}>
                   <strong>Compliance Notes:</strong> {act.notes}
                 </div>
               )}
@@ -335,19 +335,19 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
 
             <div className="settings-modal-body" style={{ color: 'var(--ivory)' }}>
               <div style={{ marginBottom: '14px' }}>
-                <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '15px', fontWeight: 700, marginBottom: '4px' }}>
                   Assigned Team Member / Role
                 </label>
                 <input
                   type="text"
                   value={editingAssignee}
                   onChange={(e) => setEditingAssignee(e.target.value)}
-                  style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(255,255,255,0.08)', color: 'var(--ivory)', fontSize: '13px' }}
+                  style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(255,255,255,0.08)', color: 'var(--ivory)', fontSize: '15.5px' }}
                 />
               </div>
 
               <div style={{ marginBottom: '14px' }}>
-                <label style={{ display: 'block', fontSize: '12px', fontWeight: 700, marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '15px', fontWeight: 700, marginBottom: '4px' }}>
                   Internal Compliance Audit Notes & Evidence Links
                 </label>
                 <textarea
@@ -355,11 +355,11 @@ export function ComplianceActionsDashboardPage({ navigate }: { navigate: (path: 
                   value={editingNotes}
                   onChange={(e) => setEditingNotes(e.target.value)}
                   placeholder="Record file locations, ticket IDs, or ERP patch notes for statutory auditor..."
-                  style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(255,255,255,0.08)', color: 'var(--ivory)', fontSize: '12.5px' }}
+                  style={{ width: '100%', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(255,255,255,0.08)', color: 'var(--ivory)', fontSize: '15px' }}
                 />
               </div>
 
-              <div style={{ padding: '12px', background: 'rgba(200,169,110,0.1)', borderRadius: '4px', border: '1px solid rgba(200,169,110,0.25)', fontSize: '11.5px', color: 'rgba(243,239,230,0.85)' }}>
+              <div style={{ padding: '12px', background: 'rgba(200,169,110,0.1)', borderRadius: '4px', border: '1px solid rgba(200,169,110,0.25)', fontSize: '14.5px', color: 'rgba(243,239,230,0.85)' }}>
                 <strong>Statutory Notice:</strong> Status updates are recorded as user-reported compliance actions.
                 A SHA-256 cryptographic digest protects record integrity under Section 65B of the Indian Evidence Act.
               </div>

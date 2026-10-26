@@ -238,7 +238,7 @@ function TrustSecurityModal({ onClose }: { onClose: () => void }) {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', borderTop: '1px solid rgba(243,239,230,0.12)', paddingTop: '16px' }}>
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
             {['ISO 27001 Aligned', 'SOC 2 Type II Controls', 'CERT-In Guidelines', 'DPDP Act 2023'].map((cert, i) => (
-              <span key={i} className="ml-signal-tag" style={{ background: 'rgba(66, 185, 166, 0.15)', color: 'var(--teal)', padding: '4px 10px', fontSize: '11px' }}>
+              <span key={i} className="ml-signal-tag" style={{ background: 'rgba(66, 185, 166, 0.15)', color: 'var(--teal)', padding: '4px 10px', fontSize: '14.5px' }}>
                 ✓ {cert}
               </span>
             ))}
@@ -385,7 +385,7 @@ function WorkspaceSettingsModal({
             <h2 id="settings-modal-title">
               <Icon name="settings" size={22} /> {t.workspaceSettings || 'Workspace Settings'}
             </h2>
-            <p className="muted-copy" style={{ color: 'rgba(243, 239, 230, 0.7)', margin: 0, fontSize: '12px' }}>
+            <p className="muted-copy" style={{ color: 'rgba(243, 239, 230, 0.7)', margin: 0, fontSize: '15px' }}>
               Configure active entity profile, statutory applicability thresholds, DPDP compliance, and backend runtime.
             </p>
           </div>
@@ -490,7 +490,7 @@ function WorkspaceSettingsModal({
                 <div className="settings-field">
                   <label>
                     Annual Aggregate Turnover (₹ Crores)
-                    <span style={{ color: 'var(--gold)', fontSize: '10px' }}>Mandatory for Rule 48(4)</span>
+                    <span style={{ color: 'var(--gold)', fontSize: '14px' }}>Mandatory for Rule 48(4)</span>
                   </label>
                   <input
                     type="number"
@@ -545,7 +545,7 @@ function WorkspaceSettingsModal({
               <div className="settings-card">
                 <div className="settings-card-header">
                   <strong><Icon name="shield" size={16} /> Digital Personal Data Protection (DPDP Act 2023) Configuration</strong>
-                  <span className="status-pill pill-good" style={{ fontSize: '9px' }}>Sovereign Indian Cloud (ap-south-1)</span>
+                  <span className="status-pill pill-good" style={{ fontSize: '13.5px' }}>Sovereign Indian Cloud (ap-south-1)</span>
                 </div>
                 <div className="settings-field" style={{ marginBottom: '14px' }}>
                   <label>Memory Retention & Storage Policy</label>
@@ -592,13 +592,13 @@ function WorkspaceSettingsModal({
                 <div className="settings-card-header">
                   <strong><Icon name="check" size={16} /> Statutory Audit Log Standards</strong>
                 </div>
-                <p style={{ fontSize: '11.5px', color: 'rgba(243,239,230,0.7)', margin: '0 0 10px', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '14.5px', color: 'rgba(243,239,230,0.7)', margin: '0 0 10px', lineHeight: 1.6 }}>
                   ReguLens satisfies the requirement of Section 134(5) of the Companies Act, 2013 by creating verifiable audit logs confirming that adequate internal financial and regulatory controls are operated effectively.
                 </p>
                 <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                  <span className="ml-signal-tag" style={{ background: 'rgba(66, 185, 166, 0.15)', color: 'var(--teal)', padding: '4px 8px', fontSize: '10px' }}>✓ Section 134(5) Audit Trail</span>
-                  <span className="ml-signal-tag" style={{ background: 'rgba(66, 185, 166, 0.15)', color: 'var(--teal)', padding: '4px 8px', fontSize: '10px' }}>✓ MCA V3 DIN Verification</span>
-                  <span className="ml-signal-tag" style={{ background: 'rgba(66, 185, 166, 0.15)', color: 'var(--teal)', padding: '4px 8px', fontSize: '10px' }}>✓ CBIC Circulars 2023-24</span>
+                  <span className="ml-signal-tag" style={{ background: 'rgba(66, 185, 166, 0.15)', color: 'var(--teal)', padding: '4px 8px', fontSize: '14px' }}>✓ Section 134(5) Audit Trail</span>
+                  <span className="ml-signal-tag" style={{ background: 'rgba(66, 185, 166, 0.15)', color: 'var(--teal)', padding: '4px 8px', fontSize: '14px' }}>✓ MCA V3 DIN Verification</span>
+                  <span className="ml-signal-tag" style={{ background: 'rgba(66, 185, 166, 0.15)', color: 'var(--teal)', padding: '4px 8px', fontSize: '14px' }}>✓ CBIC Circulars 2023-24</span>
                 </div>
               </div>
             </div>
@@ -611,7 +611,7 @@ function WorkspaceSettingsModal({
                   <strong><Icon name="document" size={16} /> Regional Languages (Srujana Host Affinity)</strong>
                 </div>
                 <div style={{ marginBottom: '14px' }}>
-                  <label style={{ fontSize: '11px', fontWeight: 700, display: 'block', marginBottom: '8px', color: 'rgba(243,239,230,0.85)' }}>
+                  <label style={{ fontSize: '14.5px', fontWeight: 700, display: 'block', marginBottom: '8px', color: 'rgba(243,239,230,0.85)' }}>
                     Active Workspace Interface Language
                   </label>
                   <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -636,8 +636,8 @@ function WorkspaceSettingsModal({
                           cursor: 'pointer'
                         }}
                       >
-                        <strong style={{ display: 'block', fontSize: '13px' }}>{item.label}</strong>
-                        <small style={{ fontSize: '10px', color: 'rgba(243,239,230,0.55)' }}>{item.desc}</small>
+                        <strong style={{ display: 'block', fontSize: '15.5px' }}>{item.label}</strong>
+                        <small style={{ fontSize: '14px', color: 'rgba(243,239,230,0.55)' }}>{item.desc}</small>
                       </button>
                     ))}
                   </div>
@@ -687,8 +687,8 @@ function WorkspaceSettingsModal({
                           style={{ cursor: 'pointer', accentColor: 'var(--teal)' }}
                         />
                         <div>
-                          <strong style={{ fontSize: '12px', color: isChecked ? 'var(--ivory)' : 'rgba(243,239,230,0.6)' }}>{g.title}</strong>
-                          <small style={{ display: 'block', fontSize: '10px', color: 'rgba(243,239,230,0.45)' }}>{g.sub}</small>
+                          <strong style={{ fontSize: '15px', color: isChecked ? 'var(--ivory)' : 'rgba(243,239,230,0.6)' }}>{g.title}</strong>
+                          <small style={{ display: 'block', fontSize: '14px', color: 'rgba(243,239,230,0.45)' }}>{g.sub}</small>
                         </div>
                       </div>
                     );
@@ -704,10 +704,10 @@ function WorkspaceSettingsModal({
                 <div className="settings-card-header">
                   <strong><Icon name="spark" size={16} /> FastAPI Engine Connection & Runtime</strong>
                   {pingStatus.status === 'online' && (
-                    <span className="status-pill pill-good" style={{ fontSize: '9px' }}>🟢 Online</span>
+                    <span className="status-pill pill-good" style={{ fontSize: '13.5px' }}>🟢 Online</span>
                   )}
                   {pingStatus.status === 'offline' && (
-                    <span className="status-pill pill-warn" style={{ fontSize: '9px' }}>🟡 Local Fallback</span>
+                    <span className="status-pill pill-warn" style={{ fontSize: '13.5px' }}>🟡 Local Fallback</span>
                   )}
                 </div>
 
@@ -738,7 +738,7 @@ function WorkspaceSettingsModal({
                     style={{
                       padding: '10px 14px',
                       borderRadius: '4px',
-                      fontSize: '11.5px',
+                      fontSize: '14.5px',
                       marginBottom: '14px',
                       background: pingStatus.status === 'online' ? 'rgba(66, 185, 166, 0.12)' : 'rgba(200, 169, 110, 0.12)',
                       border: pingStatus.status === 'online' ? '1px solid rgba(66, 185, 166, 0.3)' : '1px solid rgba(200, 169, 110, 0.3)',
@@ -751,12 +751,12 @@ function WorkspaceSettingsModal({
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px', marginTop: '10px' }}>
                   <div style={{ padding: '10px', background: 'rgba(243,239,230,0.03)', borderRadius: '4px', border: '1px solid rgba(243,239,230,0.08)' }}>
-                    <small style={{ color: 'rgba(243,239,230,0.5)', textTransform: 'uppercase', fontSize: '9px', fontWeight: 700 }}>Database Store</small>
-                    <div style={{ fontSize: '11px', marginTop: '3px', color: 'var(--ivory)' }}>Supabase PostgreSQL / Local Fallback</div>
+                    <small style={{ color: 'rgba(243,239,230,0.5)', textTransform: 'uppercase', fontSize: '13.5px', fontWeight: 700 }}>Database Store</small>
+                    <div style={{ fontSize: '14.5px', marginTop: '3px', color: 'var(--ivory)' }}>Supabase PostgreSQL / Local Fallback</div>
                   </div>
                   <div style={{ padding: '10px', background: 'rgba(243,239,230,0.03)', borderRadius: '4px', border: '1px solid rgba(243,239,230,0.08)' }}>
-                    <small style={{ color: 'rgba(243,239,230,0.5)', textTransform: 'uppercase', fontSize: '9px', fontWeight: 700 }}>ML Classifier Model</small>
-                    <div style={{ fontSize: '11px', marginTop: '3px', color: 'var(--ivory)' }}>Scikit-Learn TF-IDF (35 Gazette Topics)</div>
+                    <small style={{ color: 'rgba(243,239,230,0.5)', textTransform: 'uppercase', fontSize: '13.5px', fontWeight: 700 }}>ML Classifier Model</small>
+                    <div style={{ fontSize: '14.5px', marginTop: '3px', color: 'var(--ivory)' }}>Scikit-Learn TF-IDF (35 Gazette Topics)</div>
                   </div>
                 </div>
               </div>
@@ -767,8 +767,8 @@ function WorkspaceSettingsModal({
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
                   <div>
-                    <strong style={{ fontSize: '12px', display: 'block' }}>Reset Local ProofPath Audit Hashes</strong>
-                    <small style={{ color: 'rgba(243,239,230,0.6)', fontSize: '10.5px' }}>Removes cached browser-session audit records to run fresh benchmark validations.</small>
+                    <strong style={{ fontSize: '15px', display: 'block' }}>Reset Local ProofPath Audit Hashes</strong>
+                    <small style={{ color: 'rgba(243,239,230,0.6)', fontSize: '14px' }}>Removes cached browser-session audit records to run fresh benchmark validations.</small>
                   </div>
                   <button
                     type="button"
@@ -881,7 +881,7 @@ function Landing({ navigate, isLoggedIn = false, onSignOut }: { navigate: Naviga
             <button
               type="button"
               className="inline-link"
-              style={{ color: 'var(--gold-soft)', fontSize: '11px', textDecoration: 'underline', marginLeft: 'auto' }}
+              style={{ color: 'var(--gold-soft)', fontSize: '14.5px', textDecoration: 'underline', marginLeft: 'auto' }}
               onClick={() => setShowTrustModal(true)}
             >
               Why Trust Us? →
@@ -891,7 +891,7 @@ function Landing({ navigate, isLoggedIn = false, onSignOut }: { navigate: Naviga
         <div className="hero-caption page-width">
           <span>Built for clarity. Grounded in evidence.</span>
           {!isLoggedIn && (
-            <span style={{ color: 'var(--gold-soft)', fontSize: '11px', letterSpacing: '0.08em' }}>
+            <span style={{ color: 'var(--gold-soft)', fontSize: '14.5px', letterSpacing: '0.08em' }}>
               🔒 Protected Enterprise Environment · Sign In to Access Platform
             </span>
           )}
@@ -1064,7 +1064,7 @@ function Login({ navigate, onLoginSuccess }: { navigate: Navigate; onLoginSucces
 
     <div className="login-panel" style={{ overflowY: 'auto', maxHeight: '100vh' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-        <span className="status-pill pill-good" style={{ fontSize: '10px' }}>
+        <span className="status-pill pill-good" style={{ fontSize: '14px' }}>
           <Icon name="shield" size={11} /> Enterprise Gateway
         </span>
         <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
@@ -1096,7 +1096,7 @@ function Login({ navigate, onLoginSuccess }: { navigate: Navigate; onLoginSucces
             <h2>Enterprise Authentication</h2>
             <p className="muted-copy">Select your statutory governance role to access regulatory diffs and ProofPath records.</p>
 
-            <label style={{ display: 'block', fontSize: '11px', fontWeight: 700, color: 'var(--slate-dark)', marginBottom: '4px' }}>
+            <label style={{ display: 'block', fontSize: '14.5px', fontWeight: 700, color: 'var(--slate-dark)', marginBottom: '4px' }}>
               Select Authorized Role
             </label>
             <div className="role-chips">
@@ -1157,7 +1157,7 @@ function Login({ navigate, onLoginSuccess }: { navigate: Navigate; onLoginSucces
           <div className="mfa-box">
             <span className="small-label" style={{ color: 'var(--teal)' }}>STEP 2 · TIME-BASED ONE-TIME PASSWORD</span>
             <h2 style={{ color: 'var(--gold-soft)', margin: '6px 0 8px', fontFamily: 'var(--serif)' }}>Multi-Factor Authentication</h2>
-            <p style={{ fontSize: '13px', color: 'rgba(243,239,230,0.8)', margin: '0 0 14px' }}>
+            <p style={{ fontSize: '15.5px', color: 'rgba(243,239,230,0.8)', margin: '0 0 14px' }}>
               A 6-digit statutory authorization code has been issued for <strong>{email}</strong> ({selectedRole}).
             </p>
 
@@ -1185,7 +1185,7 @@ function Login({ navigate, onLoginSuccess }: { navigate: Navigate; onLoginSucces
                 Back
               </button>
             </div>
-            <p style={{ fontSize: '11px', color: 'rgba(243,239,230,0.5)', marginTop: '14px' }}>
+            <p style={{ fontSize: '14.5px', color: 'rgba(243,239,230,0.5)', marginTop: '14px' }}>
               Secured with SHA-256 session challenge · Complies with CERT-In Enterprise Access Directives.
             </p>
           </div>
@@ -1268,7 +1268,7 @@ function Workspace({ route, navigate, onSignOut }: { route: string; navigate: Na
           <strong>{current.path === '/dashboard' ? t.operationalView : t.evidenceLedAssessment}</strong>
         </div>
         <div className="header-actions">
-          <span className="status-pill pill-good" style={{ fontSize: '10px' }}>
+          <span className="status-pill pill-good" style={{ fontSize: '14px' }}>
             <Icon name="shield" size={11} /> MFA Verified
           </span>
           <button className="icon-button" aria-label="Trust & Security Architecture" onClick={() => setShowTrustModal(true)} title="Trust & Security Architecture">
@@ -1442,25 +1442,25 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
       {/* Quick Action: Regulatory Amendment Analysis & Compliance Actions */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '20px', marginBottom: '24px' }}>
       <div className="table-card" style={{ background: 'linear-gradient(135deg, rgba(200,169,110,0.16), rgba(11,23,40,0.98))', border: '1px solid rgba(200,169,110,0.5)', borderRadius: '10px', padding: '24px 26px', margin: 0, boxShadow: '0 8px 24px rgba(0,0,0,0.2)' }}>
-        <span className="small-label" style={{ color: 'var(--gold-soft)', fontSize: '12px', letterSpacing: '0.12em', marginBottom: '6px' }}>STATUTORY AMENDMENT INGESTION</span>
+        <span className="small-label" style={{ color: 'var(--gold-soft)', fontSize: '15px', letterSpacing: '0.12em', marginBottom: '6px' }}>STATUTORY AMENDMENT INGESTION</span>
         <h3 style={{ margin: '6px 0 8px', fontSize: '20px', color: '#ffffff', fontWeight: 600 }}>Analyze Regulatory Circular or Gazette</h3>
-        <p style={{ margin: '0 0 16px', fontSize: '14.5px', color: 'rgba(248,250,252,0.88)', lineHeight: 1.6 }}>
+        <p style={{ margin: '0 0 16px', fontSize: '16px', color: 'rgba(248,250,252,0.88)', lineHeight: 1.6 }}>
           Ingest gazette notifications from official emails, PDF circulars, or statutory notices.
           Extracts substantive provisions, computes legal diffs, and evaluates business applicability.
         </p>
-        <button className="button button-gold button-small" style={{ fontSize: '13px', padding: '8px 18px' }} onClick={() => navigate('/analyze-amendment')}>
+        <button className="button button-gold button-small" style={{ fontSize: '15.5px', padding: '8px 18px' }} onClick={() => navigate('/analyze-amendment')}>
           Launch Amendment Analyzer <Icon name="arrow" size={15} />
         </button>
       </div>
 
       <div className="table-card" style={{ background: 'linear-gradient(135deg, rgba(66,185,166,0.16), rgba(11,23,40,0.98))', border: '1px solid rgba(66,185,166,0.5)', borderRadius: '10px', padding: '24px 26px', margin: 0, boxShadow: '0 8px 24px rgba(0,0,0,0.2)' }}>
-        <span className="small-label" style={{ color: 'var(--teal)', fontSize: '12px', letterSpacing: '0.12em', marginBottom: '6px' }}>ENTERPRISE COMPLIANCE ACTION PLANS</span>
+        <span className="small-label" style={{ color: 'var(--teal)', fontSize: '15px', letterSpacing: '0.12em', marginBottom: '6px' }}>ENTERPRISE COMPLIANCE ACTION PLANS</span>
         <h3 style={{ margin: '6px 0 8px', fontSize: '20px', color: '#ffffff', fontWeight: 600 }}>Statutory Action Plans & Deadlines</h3>
-        <p style={{ margin: '0 0 16px', fontSize: '14.5px', color: 'rgba(248,250,252,0.88)', lineHeight: 1.6 }}>
+        <p style={{ margin: '0 0 16px', fontSize: '16px', color: 'rgba(248,250,252,0.88)', lineHeight: 1.6 }}>
           Review prioritized compliance roadmaps with derived statutory deadlines, required evidence documents,
           designated owners, and Section 65B tamper-evident audit logs.
         </p>
-        <button className="button button-outline button-small" style={{ color: '#ffffff', borderColor: 'var(--teal)', background: 'rgba(66,185,166,0.15)', fontSize: '13px', padding: '8px 18px' }} onClick={() => navigate('/compliance-actions')}>
+        <button className="button button-outline button-small" style={{ color: '#ffffff', borderColor: 'var(--teal)', background: 'rgba(66,185,166,0.15)', fontSize: '15.5px', padding: '8px 18px' }} onClick={() => navigate('/compliance-actions')}>
           Track Compliance Progress <Icon name="check" size={15} />
         </button>
       </div>
@@ -1487,10 +1487,10 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
     <div className="demo-ribbon" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
       <span><Icon name="info" size={14} /> {t.backendRibbon}</span>
       <div style={{ display: 'flex', gap: '8px' }}>
-        <button className="button button-gold button-small" style={{ fontSize: '0.75rem', padding: '0.35rem 0.75rem' }} onClick={() => setMlInspectorOpen((v) => !v)}>
+        <button className="button button-gold button-small" style={{ fontSize: '0.95rem', padding: '0.35rem 0.75rem' }} onClick={() => setMlInspectorOpen((v) => !v)}>
           <Icon name="spark" size={13} /> {mlInspectorOpen ? 'Hide ML Noise Filter' : 'AI Gazette Classifier (Scikit-Learn ML)'}
         </button>
-        <button className="button button-outline button-small" style={{ fontSize: '0.75rem', padding: '0.35rem 0.75rem' }} onClick={handleToggleTests}>
+        <button className="button button-outline button-small" style={{ fontSize: '0.95rem', padding: '0.35rem 0.75rem' }} onClick={handleToggleTests}>
           <Icon name="shield" size={13} /> {testModalOpen ? t.hideBenchmark : t.viewBenchmark}
         </button>
       </div>
@@ -1508,7 +1508,7 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
         </button>
       </div>
 
-      <div style={{ marginBottom: '0.6rem', fontSize: '0.76rem', color: 'rgba(243,239,230,0.6)', fontWeight: 700, textTransform: 'uppercase' }}>
+      <div style={{ marginBottom: '0.6rem', fontSize: '0.95rem', color: 'rgba(243,239,230,0.6)', fontWeight: 700, textTransform: 'uppercase' }}>
         Click a Preset Scenario or Enter Custom Gazette Text:
       </div>
       <div className="ml-preset-list">
@@ -1564,7 +1564,7 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
         >
           <Icon name="spark" size={14} /> {isEvaluatingML ? 'Computing NLP Embeddings…' : 'Classify Gazette Circular with ML'}
         </button>
-        <span style={{ fontSize: '0.85rem', color: 'rgba(248,250,252,0.85)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+        <span style={{ fontSize: '0.95rem', color: 'rgba(248,250,252,0.85)', display: 'flex', alignItems: 'center', gap: '6px' }}>
           <Icon name="shield" size={14} /> Scikit-Learn NLP Semantic Classifier (Cosine Similarity)
         </span>
       </div>
@@ -1576,7 +1576,7 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
               <span className="ml-score-number" style={{ color: mlResult.relevance_score >= 75 ? '#42b9a6' : mlResult.relevance_score >= 45 ? '#c8a96e' : '#8994a5' }}>
                 {mlResult.relevance_score}%
               </span>
-              <span style={{ fontSize: '0.85rem', color: 'rgba(243,239,230,0.7)' }}>Relevance Score</span>
+              <span style={{ fontSize: '0.95rem', color: 'rgba(243,239,230,0.7)' }}>Relevance Score</span>
             </div>
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
               <span className={`ml-score-pill ${mlResult.relevance_score >= 75 ? 'ml-tier-high' : mlResult.relevance_score >= 45 ? 'ml-tier-med' : 'ml-tier-low'}`}>
@@ -1598,12 +1598,12 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
             />
           </div>
 
-          <div style={{ fontSize: '0.82rem', color: 'rgba(243,239,230,0.85)', lineHeight: 1.6, marginBottom: '8px' }}>
+          <div style={{ fontSize: '0.95rem', color: 'rgba(243,239,230,0.85)', lineHeight: 1.6, marginBottom: '8px' }}>
             <strong>ML Assessment:</strong> {mlResult.model_explanation}
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '0.72rem', color: 'rgba(243,239,230,0.5)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+            <span style={{ fontSize: '0.95rem', color: 'rgba(243,239,230,0.5)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
               Key Semantic Signals:
             </span>
             {mlResult.matching_signals.map((sig, i) => (
@@ -1619,7 +1619,7 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
     {testModalOpen && <div className="test-runner-badge" style={{ margin: '1rem 0', background: 'rgba(11,23,40,0.95)', border: '1px solid var(--gold)', borderRadius: '10px', padding: '16px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
         <div>
-          <span style={{ fontSize: '0.78rem', letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 800 }}>
+          <span style={{ fontSize: '0.95rem', letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 800 }}>
             STATUTORY VALIDATION OBSERVATORY · MULTI-JURISDICTION ZERO-FABRICATION BENCHMARK
           </span>
           <h3 style={{ margin: '4px 0', fontSize: '1.05rem', color: 'var(--ivory)' }}>
@@ -1639,7 +1639,7 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
         <button
           type="button"
           className="button button-small"
-          style={{ background: benchmarkTab === 'A' ? 'var(--gold)' : 'transparent', color: benchmarkTab === 'A' ? '#000' : 'var(--ivory)', border: '1px solid var(--gold)', padding: '4px 10px', fontSize: '0.75rem', cursor: 'pointer' }}
+          style={{ background: benchmarkTab === 'A' ? 'var(--gold)' : 'transparent', color: benchmarkTab === 'A' ? '#000' : 'var(--ivory)', border: '1px solid var(--gold)', padding: '4px 10px', fontSize: '0.95rem', cursor: 'pointer' }}
           onClick={() => setBenchmarkTab('A')}
         >
           Case A: GST E-Invoicing (8/8)
@@ -1647,7 +1647,7 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
         <button
           type="button"
           className="button button-small"
-          style={{ background: benchmarkTab === 'B' ? 'var(--gold)' : 'transparent', color: benchmarkTab === 'B' ? '#000' : 'var(--ivory)', border: '1px solid var(--gold)', padding: '4px 10px', fontSize: '0.75rem', cursor: 'pointer' }}
+          style={{ background: benchmarkTab === 'B' ? 'var(--gold)' : 'transparent', color: benchmarkTab === 'B' ? '#000' : 'var(--ivory)', border: '1px solid var(--gold)', padding: '4px 10px', fontSize: '0.95rem', cursor: 'pointer' }}
           onClick={() => setBenchmarkTab('B')}
         >
           Case B: Maharashtra Wages (7/7)
@@ -1655,7 +1655,7 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
         <button
           type="button"
           className="button button-small"
-          style={{ background: benchmarkTab === 'C' ? 'var(--gold)' : 'transparent', color: benchmarkTab === 'C' ? '#000' : 'var(--ivory)', border: '1px solid var(--gold)', padding: '4px 10px', fontSize: '0.75rem', cursor: 'pointer' }}
+          style={{ background: benchmarkTab === 'C' ? 'var(--gold)' : 'transparent', color: benchmarkTab === 'C' ? '#000' : 'var(--ivory)', border: '1px solid var(--gold)', padding: '4px 10px', fontSize: '0.95rem', cursor: 'pointer' }}
           onClick={() => setBenchmarkTab('C')}
         >
           Case C: MCA Director KYC (8/8)
@@ -1663,7 +1663,7 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
         <button
           type="button"
           className="button button-small"
-          style={{ background: benchmarkTab === 'AUDIT' ? 'var(--gold)' : 'transparent', color: benchmarkTab === 'AUDIT' ? '#000' : 'var(--ivory)', border: '1px solid var(--gold)', padding: '4px 10px', fontSize: '0.75rem', cursor: 'pointer' }}
+          style={{ background: benchmarkTab === 'AUDIT' ? 'var(--gold)' : 'transparent', color: benchmarkTab === 'AUDIT' ? '#000' : 'var(--ivory)', border: '1px solid var(--gold)', padding: '4px 10px', fontSize: '0.95rem', cursor: 'pointer' }}
           onClick={() => setBenchmarkTab('AUDIT')}
         >
           Dataset Audit (12/12)
@@ -1673,10 +1673,10 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
       {/* Tab A Content */}
       {benchmarkTab === 'A' && (
         <div>
-          <div style={{ fontSize: '0.76rem', color: 'rgba(243,239,230,0.7)', marginBottom: '8px' }}>
+          <div style={{ fontSize: '0.95rem', color: 'rgba(243,239,230,0.7)', marginBottom: '8px' }}>
             Statutory Basis: Notification No. 10/2023-CT · Rule 48(4) Proviso · ₹5 Cr Threshold Substitution
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.5rem', fontSize: '0.82rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.5rem', fontSize: '0.95rem' }}>
             <div>✓ A01: ₹8.2 Cr → Applicable (Apex base)</div>
             <div>✓ A02: ₹3.5 Cr → Not Applicable</div>
             <div>✓ A03: ₹5,00,00,001 boundary → Applicable</div>
@@ -1692,10 +1692,10 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
       {/* Tab B Content */}
       {benchmarkTab === 'B' && (
         <div>
-          <div style={{ fontSize: '0.76rem', color: 'rgba(243,239,230,0.7)', marginBottom: '8px' }}>
+          <div style={{ fontSize: '0.95rem', color: 'rgba(243,239,230,0.7)', marginBottom: '8px' }}>
             Statutory Basis: Notification MWA-42010/CR-1301/Lab-7 · Zero Fabrication: 2004 Baseline Unverified → Preserved as REVIEW_REQUIRED
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.5rem', fontSize: '0.82rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.5rem', fontSize: '0.95rem' }}>
             <div>✓ B01: Both comparable schedules verified → Change Detected</div>
             <div>✓ B02: Original baseline cannot be verified → Review Required</div>
             <div>✓ B03: Employment categories mismatch → Review Required</div>
@@ -1710,10 +1710,10 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
       {/* Tab C Content */}
       {benchmarkTab === 'C' && (
         <div>
-          <div style={{ fontSize: '0.76rem', color: 'rgba(243,239,230,0.7)', marginBottom: '8px' }}>
+          <div style={{ fontSize: '0.95rem', color: 'rgba(243,239,230,0.7)', marginBottom: '8px' }}>
             Statutory Basis: Rule 12A (DIR-3 KYC) · G.S.R. 339(E), 527(E), 528(E) · Missing 2018 Insertion PDF → Preserved as REVIEW_REQUIRED
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.5rem', fontSize: '0.82rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.5rem', fontSize: '0.95rem' }}>
             <div>✓ C01: Rule 12A difference detected (30 Apr → 30 Jun) → Change Detected</div>
             <div>✓ C02: Amendment introduces verified filing method (DIR-3-KYC-WEB) → Change Detected</div>
             <div>✓ C03: Contact OTP verification requirement verified → Change Detected</div>
@@ -1729,10 +1729,10 @@ function DashboardPage({ navigate }: { navigate: Navigate }) {
       {/* Tab AUDIT Content */}
       {benchmarkTab === 'AUDIT' && (
         <div>
-          <div style={{ fontSize: '0.76rem', color: 'rgba(243,239,230,0.7)', marginBottom: '8px' }}>
+          <div style={{ fontSize: '0.95rem', color: 'rgba(243,239,230,0.7)', marginBottom: '8px' }}>
             Static Dataset Integrity Checks: Structural consistency, source documents & non-hallucination guardrails
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.5rem', fontSize: '0.82rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.5rem', fontSize: '0.95rem' }}>
             <div>✓ Check 01: Case A Dataset identity confirmed (CASE_A_GST_E_INVOICING)</div>
             <div>✓ Check 02: Case A has multiple authoritative source entries (&gt;= 3)</div>
             <div>✓ Check 03: Case B unresolved baseline remains flagged REVIEW_REQUIRED</div>
@@ -2213,7 +2213,7 @@ function ProofPathPage() {
           <h2 style={{ fontSize: '24px', margin: '6px 0 4px' }}>
             Record of Subsequent Changes & Action History
           </h2>
-          <p style={{ margin: 0, fontSize: '13px', color: 'var(--slate-dark)' }}>
+          <p style={{ margin: 0, fontSize: '15.5px', color: 'var(--slate-dark)' }}>
             Chronological, tamper-evident audit ledger recording every statutory notification amendment, assessment recalculation, and compliance action logged by authorized personnel.
           </p>
         </div>
@@ -2245,27 +2245,27 @@ function ProofPathPage() {
                 <td>
                   <span className="mono" style={{ fontWeight: 700, color: 'var(--navy)' }}>{ev.seqId}</span>
                   <br />
-                  <small style={{ color: 'var(--slate)', fontSize: '11px' }}>{ev.timestamp}</small>
+                  <small style={{ color: 'var(--slate)', fontSize: '14.5px' }}>{ev.timestamp}</small>
                 </td>
                 <td>
                   <strong>{ev.title}</strong>
                   <br />
-                  <small style={{ color: 'var(--slate-dark)', fontSize: '11.5px' }}>{ev.description}</small>
+                  <small style={{ color: 'var(--slate-dark)', fontSize: '14.5px' }}>{ev.description}</small>
                 </td>
                 <td>
-                  <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--navy)' }}>{ev.actor}</span>
+                  <span style={{ fontSize: '15px', fontWeight: 600, color: 'var(--navy)' }}>{ev.actor}</span>
                   <br />
-                  <small style={{ color: 'var(--slate)', fontSize: '11px' }}>{ev.role}</small>
+                  <small style={{ color: 'var(--slate)', fontSize: '14.5px' }}>{ev.role}</small>
                 </td>
                 <td>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px' }}>
-                    <span className="status-pill pill-neutral" style={{ padding: '2px 6px', fontSize: '10px' }}>{ev.prevValue}</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '15px' }}>
+                    <span className="status-pill pill-neutral" style={{ padding: '2px 6px', fontSize: '14px' }}>{ev.prevValue}</span>
                     <Icon name="arrow" size={11} />
-                    <span className="status-pill pill-good" style={{ padding: '2px 6px', fontSize: '10px' }}>{ev.newValue}</span>
+                    <span className="status-pill pill-good" style={{ padding: '2px 6px', fontSize: '14px' }}>{ev.newValue}</span>
                   </div>
                 </td>
                 <td>
-                  <code className="mono" style={{ fontSize: '11px', background: 'rgba(200,169,110,0.12)', padding: '3px 6px', borderRadius: '4px' }}>
+                  <code className="mono" style={{ fontSize: '14.5px', background: 'rgba(200,169,110,0.12)', padding: '3px 6px', borderRadius: '4px' }}>
                     {ev.hash}
                   </code>
                 </td>
@@ -2281,7 +2281,7 @@ function ProofPathPage() {
       <div style={{ marginTop: '16px', padding: '12px 16px', background: 'rgba(200,169,110,0.08)', borderRadius: '6px', border: '1px solid rgba(200,169,110,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <Icon name="shield" size={16} />
-          <span style={{ fontSize: '12px', color: 'var(--slate-dark)' }}>
+          <span style={{ fontSize: '15px', color: 'var(--slate-dark)' }}>
             ProofPath generates continuous SHA-256 hash chains for all subsequent compliance actions to satisfy Indian Evidence Act Section 65B traceability.
           </span>
         </div>
@@ -2289,7 +2289,7 @@ function ProofPathPage() {
           type="button"
           className="button button-outline button-small"
           onClick={copyDigest}
-          style={{ fontSize: '11.5px', gap: '6px' }}
+          style={{ fontSize: '14.5px', gap: '6px' }}
         >
           <Icon name="clipboard" size={13} />
           {copied ? 'Audit Digest Copied' : 'Export Audit Certificate'}
@@ -2463,7 +2463,7 @@ function MSMEVerificationPage({
         <header className="site-nav">
           <Brand onClick={() => navigate('/')} />
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginLeft: 'auto' }}>
-            <span className="status-pill pill-gold" style={{ fontSize: '11px' }}>
+            <span className="status-pill pill-gold" style={{ fontSize: '14.5px' }}>
               <Icon name="shield" size={12} /> Statutory Admission Gate
             </span>
             <LanguageSwitcher dark />
@@ -2486,9 +2486,9 @@ function MSMEVerificationPage({
                 </>
               }
             >
-              <p style={{ color: '#2d3748', fontSize: '14px', lineHeight: 1.65, maxWidth: '640px', margin: '8px 0 0' }}>
+              <p style={{ color: '#2d3748', fontSize: '16px', lineHeight: 1.65, maxWidth: '640px', margin: '8px 0 0' }}>
                 Statutory verification engine matching uploaded Udyam certificates against the official Government of India
-                portal (<code style={{ color: '#07111f', fontWeight: 700, fontSize: '13.5px' }}>udyamregistration.gov.in</code>), performing anti-tampering heuristics, OCR cross-checks, and ML anomaly detection.
+                portal (<code style={{ color: '#07111f', fontWeight: 700, fontSize: '15.5px' }}>udyamregistration.gov.in</code>), performing anti-tampering heuristics, OCR cross-checks, and ML anomaly detection.
               </p>
             </PageHeader>
           </>
@@ -2500,7 +2500,7 @@ function MSMEVerificationPage({
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: '32px', margin: '6px 0 10px', color: 'var(--ivory)' }}>
               Statutory Enterprise <em>Verification & Admission</em>
             </h1>
-            <p style={{ color: 'rgba(243,239,230,0.92)', maxWidth: '840px', fontSize: '14.5px', lineHeight: 1.65 }}>
+            <p style={{ color: 'rgba(243,239,230,0.92)', maxWidth: '840px', fontSize: '16px', lineHeight: 1.65 }}>
               Under sovereign zero-trust statutory compliance, access to ReguLens is strictly gated by authenticated enterprise credentials.
               Verify your Udyam Certificate against the official Government of India portal (<code>udyamregistration.gov.in</code>).
               Authentic enterprises will be automatically granted platform access; spoofed or fraudulent certificates will be permanently flagged and blocked.
@@ -2511,10 +2511,10 @@ function MSMEVerificationPage({
       <section className="table-card" style={{ marginBottom: '24px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
           <div>
-            <span className="small-label" style={{ color: '#785116', fontSize: '11.5px', fontWeight: 800, letterSpacing: '0.12em' }}>1-CLICK STATUTORY TEST SCENARIOS</span>
+            <span className="small-label" style={{ color: '#785116', fontSize: '14.5px', fontWeight: 800, letterSpacing: '0.12em' }}>1-CLICK STATUTORY TEST SCENARIOS</span>
             <h3 style={{ margin: '4px 0 0', fontSize: '18px', color: '#07111f', fontWeight: 700 }}>Evaluate Pre-Generated Government Certificates</h3>
           </div>
-          <span className="status-pill pill-neutral" style={{ fontSize: '11px', fontWeight: 700 }}>Judge / Auditor Fast-Track</span>
+          <span className="status-pill pill-neutral" style={{ fontSize: '14.5px', fontWeight: 700 }}>Judge / Auditor Fast-Track</span>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '12px' }}>
@@ -2537,11 +2537,11 @@ function MSMEVerificationPage({
                 onClick={() => handleSelectPreset(p)}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center', marginBottom: '5px' }}>
-                  <strong style={{ fontSize: '14.5px', color: '#ffffff', fontWeight: 700 }}>{p.title}</strong>
+                  <strong style={{ fontSize: '16px', color: '#ffffff', fontWeight: 700 }}>{p.title}</strong>
                   <StatusPill tone={p.badge_tone}>{p.expected_verdict}</StatusPill>
                 </div>
-                <small style={{ color: '#f0ece1', fontSize: '13px', lineHeight: 1.45, fontWeight: 500 }}>{p.subtitle}</small>
-                <code style={{ marginTop: '7px', fontSize: '13px', color: '#ffd478', fontWeight: 700, letterSpacing: '0.04em' }}>{p.udyam_number}</code>
+                <small style={{ color: '#f0ece1', fontSize: '15.5px', lineHeight: 1.45, fontWeight: 500 }}>{p.subtitle}</small>
+                <code style={{ marginTop: '7px', fontSize: '15.5px', color: '#ffd478', fontWeight: 700, letterSpacing: '0.04em' }}>{p.udyam_number}</code>
               </button>
             );
           })}
@@ -2577,7 +2577,7 @@ function MSMEVerificationPage({
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
               <Icon name="document" size={32} />
               <strong style={{ fontSize: '16px', color: '#07111f', fontWeight: 700 }}>{selectedFile ? selectedFile.name : 'Click to Upload or Drag & Drop Udyam Certificate'}</strong>
-              <p style={{ margin: 0, fontSize: '13.5px', color: '#2d3748', fontWeight: 500 }}>
+              <p style={{ margin: 0, fontSize: '15.5px', color: '#2d3748', fontWeight: 500 }}>
                 Accepted formats: <strong style={{ color: '#07111f', fontWeight: 700 }}>PDF, PNG, JPG</strong> (Scanned certificate with anti-malware inspection)
               </p>
               {selectedFile && (
@@ -2589,26 +2589,26 @@ function MSMEVerificationPage({
           </div>
 
           <div style={{ marginTop: '20px' }}>
-            <span className="small-label" style={{ color: '#785116', fontSize: '11.5px', fontWeight: 800, letterSpacing: '0.12em' }}>STATUTORY ENTERPRISE IDENTIFIERS</span>
+            <span className="small-label" style={{ color: '#785116', fontSize: '14.5px', fontWeight: 800, letterSpacing: '0.12em' }}>STATUTORY ENTERPRISE IDENTIFIERS</span>
             <div className="ml-form-grid" style={{ marginTop: '8px' }}>
               <div className="ml-input-group">
-                <label style={{ color: '#07111f', fontSize: '12.5px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '6px', display: 'block' }}>Udyam Registration Number (URN)</label>
+                <label style={{ color: '#07111f', fontSize: '15px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '6px', display: 'block' }}>Udyam Registration Number (URN)</label>
                 <input
                   type="text"
                   value={userInputURN}
                   onChange={(e) => setUserInputURN(e.target.value.toUpperCase())}
                   placeholder="e.g., UDYAM-MH-26-0048291 or UAP-XX-00-0000000"
-                  style={{ background: '#ffffff', color: '#07111f', fontSize: '14px', fontWeight: 600, border: '1.5px solid rgba(16,24,34,0.25)', padding: '10px 12px', borderRadius: '5px' }}
+                  style={{ background: '#ffffff', color: '#07111f', fontSize: '16px', fontWeight: 600, border: '1.5px solid rgba(16,24,34,0.25)', padding: '10px 12px', borderRadius: '5px' }}
                 />
               </div>
               <div className="ml-input-group">
-                <label style={{ color: '#07111f', fontSize: '12.5px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '6px', display: 'block' }}>Enterprise Name (As Claimed)</label>
+                <label style={{ color: '#07111f', fontSize: '15px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '6px', display: 'block' }}>Enterprise Name (As Claimed)</label>
                 <input
                   type="text"
                   value={userInputName}
                   onChange={(e) => setUserInputName(e.target.value)}
                   placeholder="e.g., Apex Precision Components Pvt Ltd"
-                  style={{ background: '#ffffff', color: '#07111f', fontSize: '14px', fontWeight: 600, border: '1.5px solid rgba(16,24,34,0.25)', padding: '10px 12px', borderRadius: '5px' }}
+                  style={{ background: '#ffffff', color: '#07111f', fontSize: '16px', fontWeight: 600, border: '1.5px solid rgba(16,24,34,0.25)', padding: '10px 12px', borderRadius: '5px' }}
                 />
               </div>
             </div>
@@ -2619,18 +2619,18 @@ function MSMEVerificationPage({
               className="button button-gold"
               onClick={runVerification}
               disabled={loading || (!selectedFile && !selectedPresetId && !userInputURN)}
-              style={{ fontSize: '14px', fontWeight: 700 }}
+              style={{ fontSize: '16px', fontWeight: 700 }}
             >
               <Icon name="shield" size={16} />
               {loading ? 'Executing Statutory Verification…' : 'Verify Against Official Portal'}
             </button>
-            <span style={{ fontSize: '13.5px', color: '#2d3748', fontWeight: 500 }}>
-              Cross-verifies live against <code style={{ color: '#07111f', fontWeight: 700, fontSize: '13px' }}>udyamregistration.gov.in</code>
+            <span style={{ fontSize: '15.5px', color: '#2d3748', fontWeight: 500 }}>
+              Cross-verifies live against <code style={{ color: '#07111f', fontWeight: 700, fontSize: '15.5px' }}>udyamregistration.gov.in</code>
             </span>
           </div>
 
           {errorMsg && (
-            <div style={{ marginTop: '16px', padding: '12px', background: 'rgba(197,64,64,0.18)', border: '1px solid #c54040', borderRadius: '8px', color: '#ffb3b3', fontSize: '13.5px', fontWeight: 600 }}>
+            <div style={{ marginTop: '16px', padding: '12px', background: 'rgba(197,64,64,0.18)', border: '1px solid #c54040', borderRadius: '8px', color: '#ffb3b3', fontSize: '15.5px', fontWeight: 600 }}>
               <Icon name="close" size={14} /> <strong>Error:</strong> {errorMsg}
             </div>
           )}
@@ -2662,7 +2662,7 @@ function MSMEVerificationPage({
               </div>
               <span className="mono">GOI</span>
             </div>
-            <p style={{ fontSize: '13.5px', color: '#2d3748', lineHeight: 1.6, fontWeight: 500 }}>
+            <p style={{ fontSize: '15.5px', color: '#2d3748', lineHeight: 1.6, fontWeight: 500 }}>
               Ministry of Micro, Small and Medium Enterprises maintains the Udyam central registry under MSMED Act 2006.
             </p>
             <div style={{ marginTop: '14px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -2671,7 +2671,7 @@ function MSMEVerificationPage({
                 target="_blank"
                 rel="noreferrer"
                 className="button button-outline button-small"
-                style={{ justifyContent: 'space-between', color: '#07111f', fontWeight: 700, fontSize: '13px', border: '1px solid rgba(16,24,34,0.22)', background: 'rgba(255,255,255,0.85)' }}
+                style={{ justifyContent: 'space-between', color: '#07111f', fontWeight: 700, fontSize: '15.5px', border: '1px solid rgba(16,24,34,0.22)', background: 'rgba(255,255,255,0.85)' }}
               >
                 <span>Verify at Udyam Portal</span>
                 <Icon name="external" size={13} />
@@ -2681,7 +2681,7 @@ function MSMEVerificationPage({
                 target="_blank"
                 rel="noreferrer"
                 className="button button-outline button-small"
-                style={{ justifyContent: 'space-between', color: '#07111f', fontWeight: 700, fontSize: '13px', border: '1px solid rgba(16,24,34,0.22)', background: 'rgba(255,255,255,0.85)' }}
+                style={{ justifyContent: 'space-between', color: '#07111f', fontWeight: 700, fontSize: '15.5px', border: '1px solid rgba(16,24,34,0.22)', background: 'rgba(255,255,255,0.85)' }}
               >
                 <span>Official Certificate Print</span>
                 <Icon name="external" size={13} />
@@ -2689,10 +2689,10 @@ function MSMEVerificationPage({
             </div>
             <div className="history-line" style={{ marginTop: '18px' }}>
               <Icon name="shield" size={16} />
-              <span style={{ color: '#07111f', fontWeight: 700, fontSize: '13px' }}>
+              <span style={{ color: '#07111f', fontWeight: 700, fontSize: '15.5px' }}>
                 Zero Fake Affirmation Guarantee:
                 <br />
-                <small style={{ color: '#475569', fontSize: '12px', fontWeight: 500 }}>Unregistered numbers link to official portal without inventing results.</small>
+                <small style={{ color: '#475569', fontSize: '15px', fontWeight: 500 }}>Unregistered numbers link to official portal without inventing results.</small>
               </span>
             </div>
           </section>
@@ -2702,14 +2702,14 @@ function MSMEVerificationPage({
             <div>
               <Eyebrow>DOWNLOAD SAMPLE CERTS</Eyebrow>
               <h3 style={{ fontSize: '22px', color: '#07111f', fontWeight: 700, margin: '6px 0 0' }}>Test Files for Inspection</h3>
-              <p style={{ fontSize: '13.5px', color: '#2d3748', lineHeight: 1.6, fontWeight: 500 }}>Download sample PDF certificates created to demonstrate authentic vs forged cases.</p>
+              <p style={{ fontSize: '15.5px', color: '#2d3748', lineHeight: 1.6, fontWeight: 500 }}>Download sample PDF certificates created to demonstrate authentic vs forged cases.</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '10px' }}>
                 <a
                   href="/api/msme/sample-download/apex_valid"
                   target="_blank"
                   rel="noreferrer"
                   className="text-link"
-                  style={{ fontSize: '14px', fontWeight: 700, color: '#855d14' }}
+                  style={{ fontSize: '16px', fontWeight: 700, color: '#855d14' }}
                 >
                   Download Apex Precision Valid PDF <Icon name="arrow" size={13} />
                 </a>
@@ -2718,7 +2718,7 @@ function MSMEVerificationPage({
                   target="_blank"
                   rel="noreferrer"
                   className="text-link"
-                  style={{ fontSize: '14px', fontWeight: 700, color: '#855d14' }}
+                  style={{ fontSize: '16px', fontWeight: 700, color: '#855d14' }}
                 >
                   Download Tampered Fake PDF <Icon name="arrow" size={13} />
                 </a>
@@ -2741,7 +2741,7 @@ function MSMEVerificationPage({
                   <h2 style={{ margin: '6px 0 4px', fontSize: '26px', color: 'var(--ivory)' }}>
                     Access Granted: Verified Sovereign Enterprise
                   </h2>
-                  <p style={{ margin: 0, fontSize: '13.5px', color: 'rgba(243,239,230,0.85)', maxWidth: '720px' }}>
+                  <p style={{ margin: 0, fontSize: '15.5px', color: 'rgba(243,239,230,0.85)', maxWidth: '720px' }}>
                     Match confirmed on Ministry Central Portal (<code>udyamregistration.gov.in</code>). Enterprise <strong>{result.enterprise_name}</strong> holds valid URN <strong>{result.udyam_number}</strong>.
                   </p>
                   {isPreRegistration && admittingCountdown !== null && (
@@ -2759,7 +2759,7 @@ function MSMEVerificationPage({
                       type="button"
                       className="button button-gold"
                       onClick={handleAdmitNow}
-                      style={{ padding: '12px 24px', fontSize: '14px', boxShadow: '0 4px 20px rgba(200,169,110,0.4)' }}
+                      style={{ padding: '12px 24px', fontSize: '16px', boxShadow: '0 4px 20px rgba(200,169,110,0.4)' }}
                     >
                       Enter Sovereign Workspace Now <Icon name="arrow" size={16} />
                     </button>
@@ -2784,14 +2784,14 @@ function MSMEVerificationPage({
                   <h2 style={{ margin: '6px 0 4px', fontSize: '26px', color: '#ffb3b3' }}>
                     Flagged Fraudulent / Tampered Certificate
                   </h2>
-                  <p style={{ margin: 0, fontSize: '13.5px', color: '#ffd6d6', maxWidth: '720px' }}>
+                  <p style={{ margin: 0, fontSize: '15.5px', color: '#ffd6d6', maxWidth: '720px' }}>
                     {result.summary || 'Critical discrepancies detected between submitted document and Ministry central records. Zero-trust security enforcement active.'}
                   </p>
                   <div style={{ marginTop: '12px', padding: '10px 14px', background: 'rgba(0,0,0,0.4)', borderRadius: '4px', border: '1px solid rgba(255,100,100,0.2)' }}>
-                    <strong style={{ fontSize: '12px', color: '#ff9999', display: 'block', marginBottom: '4px' }}>
+                    <strong style={{ fontSize: '15px', color: '#ff9999', display: 'block', marginBottom: '4px' }}>
                       Flagged Statutory Violations:
                     </strong>
-                    <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '12px', color: '#ffcccc' }}>
+                    <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '15px', color: '#ffcccc' }}>
                       <li>Entity verification failed official government registry check.</li>
                       <li>Tampering score indicates high probability of spoofed PDF stream.</li>
                       <li>Access to ReguLens regulatory intelligence workspace is strictly prohibited.</li>
@@ -2844,12 +2844,12 @@ function MSMEVerificationPage({
                   <h2 style={{ margin: 0, fontSize: '26px' }}>{result.verdict}</h2>
                   <StatusPill tone={result.verdict_tone}>{result.confidence_score}% Confidence</StatusPill>
                 </div>
-                <p style={{ margin: '8px 0 0', fontSize: '14px', maxWidth: '780px', opacity: 0.9 }}>
+                <p style={{ margin: '8px 0 0', fontSize: '16px', maxWidth: '780px', opacity: 0.9 }}>
                   {result.summary}
                 </p>
               </div>
               <div style={{ textAlign: 'right' }}>
-                <span className="mono" style={{ fontSize: '12px', opacity: 0.75 }}>
+                <span className="mono" style={{ fontSize: '15px', opacity: 0.75 }}>
                   EVALUATED AT: {new Date(result.timestamp).toLocaleTimeString()}
                 </span>
                 <div style={{ marginTop: '8px' }}>
@@ -2867,15 +2867,15 @@ function MSMEVerificationPage({
           </div>
 
           <div style={{ marginTop: '24px' }}>
-            <span className="small-label" style={{ color: '#785116', fontSize: '11.5px', fontWeight: 800, letterSpacing: '0.12em' }}>
+            <span className="small-label" style={{ color: '#785116', fontSize: '14.5px', fontWeight: 800, letterSpacing: '0.12em' }}>
               STEP 6: DOCUMENT INTEGRITY & SECURITY CHECKS
             </span>
             <div className="msme-sec-grid">
               <div className="sec-check-card">
                 <div>
-                  <span className="sec-label" style={{ color: '#785116', fontSize: '11px', fontWeight: 800, letterSpacing: '0.08em' }}>MAGIC BYTES & FILE VALIDITY</span>
-                  <strong style={{ fontSize: '14.5px', color: '#07111f', fontWeight: 700 }}>{result.document_checks.format_detected}</strong>
-                  <p style={{ fontSize: '13px', color: '#334155', fontWeight: 500, margin: '4px 0 0' }}>{result.document_checks.is_valid_format ? `Header validated (${result.document_checks.file_size_kb} KB)` : 'Invalid file header'}</p>
+                  <span className="sec-label" style={{ color: '#785116', fontSize: '14.5px', fontWeight: 800, letterSpacing: '0.08em' }}>MAGIC BYTES & FILE VALIDITY</span>
+                  <strong style={{ fontSize: '16px', color: '#07111f', fontWeight: 700 }}>{result.document_checks.format_detected}</strong>
+                  <p style={{ fontSize: '15.5px', color: '#334155', fontWeight: 500, margin: '4px 0 0' }}>{result.document_checks.is_valid_format ? `Header validated (${result.document_checks.file_size_kb} KB)` : 'Invalid file header'}</p>
                 </div>
                 <StatusPill tone={result.document_checks.is_valid_format ? 'good' : 'bad'}>
                   {result.document_checks.is_valid_format ? 'Valid File' : 'Invalid Header'}
@@ -2884,9 +2884,9 @@ function MSMEVerificationPage({
 
               <div className="sec-check-card">
                 <div>
-                  <span className="sec-label" style={{ color: '#785116', fontSize: '11px', fontWeight: 800, letterSpacing: '0.08em' }}>ANTI-MALWARE SCAN</span>
-                  <strong style={{ fontSize: '14.5px', color: '#07111f', fontWeight: 700 }}>{result.document_checks.malware_scan === 'CLEAN' ? 'CLEAN · NO THREATS' : 'MALWARE SUSPECT'}</strong>
-                  <p style={{ fontSize: '13px', color: '#334155', fontWeight: 500, margin: '4px 0 0' }}>{result.document_checks.malware_details}</p>
+                  <span className="sec-label" style={{ color: '#785116', fontSize: '14.5px', fontWeight: 800, letterSpacing: '0.08em' }}>ANTI-MALWARE SCAN</span>
+                  <strong style={{ fontSize: '16px', color: '#07111f', fontWeight: 700 }}>{result.document_checks.malware_scan === 'CLEAN' ? 'CLEAN · NO THREATS' : 'MALWARE SUSPECT'}</strong>
+                  <p style={{ fontSize: '15.5px', color: '#334155', fontWeight: 500, margin: '4px 0 0' }}>{result.document_checks.malware_details}</p>
                 </div>
                 <StatusPill tone={result.document_checks.malware_scan === 'CLEAN' ? 'good' : 'bad'}>
                   {result.document_checks.malware_scan === 'CLEAN' ? '0 Threats' : 'Quarantine'}
@@ -2895,9 +2895,9 @@ function MSMEVerificationPage({
 
               <div className="sec-check-card">
                 <div>
-                  <span className="sec-label" style={{ color: '#785116', fontSize: '11px', fontWeight: 800, letterSpacing: '0.08em' }}>QR CODE PAYLOAD CHECK</span>
-                  <strong style={{ fontSize: '14.5px', color: '#07111f', fontWeight: 700 }}>{result.document_checks.qr_code_detected ? 'QR CODE FOUND' : 'NO QR CODE'}</strong>
-                  <p style={{ fontSize: '13px', color: '#334155', fontWeight: 500, margin: '4px 0 0' }}>{result.document_checks.qr_code_details}</p>
+                  <span className="sec-label" style={{ color: '#785116', fontSize: '14.5px', fontWeight: 800, letterSpacing: '0.08em' }}>QR CODE PAYLOAD CHECK</span>
+                  <strong style={{ fontSize: '16px', color: '#07111f', fontWeight: 700 }}>{result.document_checks.qr_code_detected ? 'QR CODE FOUND' : 'NO QR CODE'}</strong>
+                  <p style={{ fontSize: '15.5px', color: '#334155', fontWeight: 500, margin: '4px 0 0' }}>{result.document_checks.qr_code_details}</p>
                 </div>
                 <StatusPill tone={result.document_checks.qr_code_detected ? 'good' : 'neutral'}>
                   {result.document_checks.qr_code_detected ? 'Official Link' : 'Standard'}
@@ -2906,9 +2906,9 @@ function MSMEVerificationPage({
 
               <div className="sec-check-card">
                 <div>
-                  <span className="sec-label" style={{ color: '#785116', fontSize: '11px', fontWeight: 800, letterSpacing: '0.08em' }}>DIGITAL SIGNATURE (PKI)</span>
-                  <strong style={{ fontSize: '14.5px', color: '#07111f', fontWeight: 700 }}>{result.document_checks.digital_signature_present ? 'SIGNATURE DETECTED' : 'UNISIGNED / SCAN'}</strong>
-                  <p style={{ fontSize: '13px', color: '#334155', fontWeight: 500, margin: '4px 0 0' }}>{result.document_checks.digital_signature_details}</p>
+                  <span className="sec-label" style={{ color: '#785116', fontSize: '14.5px', fontWeight: 800, letterSpacing: '0.08em' }}>DIGITAL SIGNATURE (PKI)</span>
+                  <strong style={{ fontSize: '16px', color: '#07111f', fontWeight: 700 }}>{result.document_checks.digital_signature_present ? 'SIGNATURE DETECTED' : 'UNISIGNED / SCAN'}</strong>
+                  <p style={{ fontSize: '15.5px', color: '#334155', fontWeight: 500, margin: '4px 0 0' }}>{result.document_checks.digital_signature_details}</p>
                 </div>
                 <StatusPill tone={result.document_checks.digital_signature_present ? 'good' : 'neutral'}>
                   {result.document_checks.digital_signature_present ? 'Signed' : 'Paper / Standard'}
@@ -2942,10 +2942,10 @@ function MSMEVerificationPage({
                 <tbody>
                   {result.comparison_table.map((row, idx) => (
                     <tr key={idx} style={{ background: row.status === 'MATCH' ? 'transparent' : 'rgba(197,64,64,0.08)' }}>
-                      <td><strong style={{ color: '#07111f', fontSize: '13.5px' }}>{row.field}</strong></td>
-                      <td><code style={{ color: '#07111f', fontSize: '13px', fontWeight: 600 }}>{row.certificate_extracted || '—'}</code></td>
-                      <td><code style={{ color: '#07111f', fontSize: '13px', fontWeight: 600 }}>{row.user_input || '—'}</code></td>
-                      <td><code style={{ color: '#07111f', fontSize: '13px', fontWeight: 600 }}>{row.official_portal_record || '—'}</code></td>
+                      <td><strong style={{ color: '#07111f', fontSize: '15.5px' }}>{row.field}</strong></td>
+                      <td><code style={{ color: '#07111f', fontSize: '15.5px', fontWeight: 600 }}>{row.certificate_extracted || '—'}</code></td>
+                      <td><code style={{ color: '#07111f', fontSize: '15.5px', fontWeight: 600 }}>{row.user_input || '—'}</code></td>
+                      <td><code style={{ color: '#07111f', fontSize: '15.5px', fontWeight: 600 }}>{row.official_portal_record || '—'}</code></td>
                       <td>
                         <StatusPill tone={row.status_tone}>
                           {row.status}
@@ -2964,50 +2964,50 @@ function MSMEVerificationPage({
                 <Eyebrow>STEP 7: MACHINE LEARNING & STATUTORY ANOMALY ANALYSIS</Eyebrow>
                 <h3 style={{ fontSize: '22px', color: '#07111f', fontWeight: 700, margin: '6px 0 0' }}>Text Similarity & Anomaly Detection Heuristics</h3>
               </div>
-              <span className="mono" style={{ color: '#855d14', fontWeight: 700, fontSize: '13px' }}>
+              <span className="mono" style={{ color: '#855d14', fontWeight: 700, fontSize: '15.5px' }}>
                 Similarity: {result.ml_anomaly_analysis.name_semantic_similarity}%
               </span>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px', marginBottom: '16px' }}>
               <div style={{ padding: '14px', background: 'rgba(255,255,255,0.7)', border: '1px solid rgba(16,24,34,0.1)', borderRadius: '6px' }}>
-                <span className="small-label" style={{ color: '#785116', fontSize: '11px', fontWeight: 800 }}>TEXT SIMILARITY SCORE</span>
+                <span className="small-label" style={{ color: '#785116', fontSize: '14.5px', fontWeight: 800 }}>TEXT SIMILARITY SCORE</span>
                 <div style={{ fontSize: '24px', fontWeight: 800, color: result.ml_anomaly_analysis.name_semantic_similarity > 80 ? '#277866' : '#957332', margin: '4px 0' }}>
                   {result.ml_anomaly_analysis.name_semantic_similarity}%
                 </div>
-                <small style={{ color: '#334155', fontSize: '12.5px', fontWeight: 500 }}>SequenceMatcher Levenshtein distance on enterprise name</small>
+                <small style={{ color: '#334155', fontSize: '15px', fontWeight: 500 }}>SequenceMatcher Levenshtein distance on enterprise name</small>
               </div>
 
               <div style={{ padding: '14px', background: 'rgba(255,255,255,0.7)', border: '1px solid rgba(16,24,34,0.1)', borderRadius: '6px' }}>
-                <span className="small-label" style={{ color: '#785116', fontSize: '11px', fontWeight: 800 }}>ESTIMATED ANOMALY RISK</span>
+                <span className="small-label" style={{ color: '#785116', fontSize: '14.5px', fontWeight: 800 }}>ESTIMATED ANOMALY RISK</span>
                 <div style={{ fontSize: '24px', fontWeight: 800, color: result.ml_anomaly_analysis.anomaly_risk_score < 25 ? '#277866' : '#c54040', margin: '4px 0' }}>
                   {result.ml_anomaly_analysis.anomaly_risk_score}% Risk
                 </div>
-                <small style={{ color: '#334155', fontSize: '12.5px', fontWeight: 500 }}>Composite anomaly calculation across format, state, & category</small>
+                <small style={{ color: '#334155', fontSize: '15px', fontWeight: 500 }}>Composite anomaly calculation across format, state, & category</small>
               </div>
 
               <div style={{ padding: '14px', background: 'rgba(255,255,255,0.7)', border: '1px solid rgba(16,24,34,0.1)', borderRadius: '6px' }}>
-                <span className="small-label" style={{ color: '#785116', fontSize: '11px', fontWeight: 800 }}>FLAGGED ANOMALIES</span>
+                <span className="small-label" style={{ color: '#785116', fontSize: '14.5px', fontWeight: 800 }}>FLAGGED ANOMALIES</span>
                 <div style={{ fontSize: '24px', fontWeight: 800, color: result.ml_anomaly_analysis.anomalies_detected.length === 0 ? '#277866' : '#c54040', margin: '4px 0' }}>
                   {result.ml_anomaly_analysis.anomalies_detected.length} Detected
                 </div>
-                <small style={{ color: '#334155', fontSize: '12.5px', fontWeight: 500 }}>Suspicious deviations flagged for compliance auditor</small>
+                <small style={{ color: '#334155', fontSize: '15px', fontWeight: 500 }}>Suspicious deviations flagged for compliance auditor</small>
               </div>
             </div>
 
             {result.ml_anomaly_analysis.anomalies_detected.length > 0 ? (
               <div style={{ padding: '12px 16px', background: 'rgba(197,64,64,0.12)', border: '1px solid rgba(197,64,64,0.4)', borderRadius: '6px' }}>
-                <strong style={{ color: '#ffb3b3', fontSize: '13px', display: 'block', marginBottom: '6px' }}>
+                <strong style={{ color: '#ffb3b3', fontSize: '15.5px', display: 'block', marginBottom: '6px' }}>
                   <Icon name="close" size={14} /> Anomalies Requiring Compliance Review:
                 </strong>
-                <ul style={{ margin: 0, paddingLeft: '20px', color: '#ffcccc', fontSize: '12.5px', lineHeight: 1.6 }}>
+                <ul style={{ margin: 0, paddingLeft: '20px', color: '#ffcccc', fontSize: '15px', lineHeight: 1.6 }}>
                   {result.ml_anomaly_analysis.anomalies_detected.map((anom, i) => (
                     <li key={i}>{anom}</li>
                   ))}
                 </ul>
               </div>
             ) : (
-              <div style={{ padding: '12px 16px', background: 'rgba(66,185,166,0.12)', border: '1px solid rgba(66,185,166,0.3)', borderRadius: '6px', color: '#a0eedf', fontSize: '13px' }}>
+              <div style={{ padding: '12px 16px', background: 'rgba(66,185,166,0.12)', border: '1px solid rgba(66,185,166,0.3)', borderRadius: '6px', color: '#a0eedf', fontSize: '15.5px' }}>
                 <Icon name="check" size={14} /> <strong>Clean Audit:</strong> No suspicious deviations or forged patterns detected in certificate stream.
               </div>
             )}
@@ -3031,7 +3031,7 @@ function MSMEVerificationPage({
                 type="button"
                 className="button button-gold"
                 onClick={handleAdmitNow}
-                style={{ padding: '10px 22px', fontSize: '13px', boxShadow: '0 4px 18px rgba(200,169,110,0.4)' }}
+                style={{ padding: '10px 22px', fontSize: '15.5px', boxShadow: '0 4px 18px rgba(200,169,110,0.4)' }}
               >
                 Proceed to Sovereign Workspace <Icon name="arrow" size={15} />
               </button>
